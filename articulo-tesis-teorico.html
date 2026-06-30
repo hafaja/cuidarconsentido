@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadre théorique de la thèse (Ch. 1-3) · CuidarConSentido</title>
+<meta name="description" content="Synthèse de la partie théorique de la thèse de doctorat « Stimulation cognitive au crépuscule de la vie » : vieillesse et dignité, neuropsychologie du vieillissement, environnement résidentiel et programme MAR. Par J. M. V. Hafashimana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F3EC; --bg2:#FFFFFF; --paper:#FBF9F4;
+  --ink:#21302C; --ink-soft:#54635D; --ink-faint:#8A968F;
+  --line:#E7E0D2; --line2:#DED6C4;
+  --green:#20564A; --green-d:#163E34; --green-soft:#DCE8E1; --green-tint:#EAF1ED;
+  --amber:#DD9C44; --amber-d:#BC7F2C; --amber-soft:#F7E8CD;
+  --shadow:0 1px 2px rgba(30,50,44,.04), 0 12px 30px -12px rgba(30,50,44,.14);
+  --r:18px; --maxw:760px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'Mulish',system-ui,sans-serif; font-size:18px; line-height:1.7; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:500; line-height:1.15; letter-spacing:-.01em; margin:0}
+p{margin:0 0 1.1em}
+a{color:inherit}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.bar{position:sticky; top:0; z-index:30; background:rgba(246,243,236,.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--line)}
+.bar-in{max-width:1040px; margin:0 auto; padding:0 22px; height:64px; display:flex; align-items:center; gap:16px}
+.brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--ink); text-decoration:none}
+.brand b{color:var(--green)} .brand span{color:var(--amber-d)}
+.back{margin-left:auto; font-weight:700; font-size:14px; color:var(--green); display:inline-flex; align-items:center; gap:6px; padding:8px 6px; text-decoration:none}
+.back svg{width:15px;height:15px}
+article{padding:52px 0 20px}
+.eyebrow{display:inline-flex; align-items:center; gap:9px; font-size:12px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--green); margin-bottom:18px}
+.eyebrow::before{content:""; width:22px; height:2px; background:var(--amber); border-radius:2px}
+article h1{font-size:clamp(29px,4.8vw,44px); font-weight:500; margin-bottom:18px}
+.standfirst{font-size:20px; color:var(--ink-soft); font-family:'Fraunces',serif; font-style:italic; line-height:1.45; margin-bottom:26px}
+.byline{display:flex; align-items:center; gap:12px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:14.5px; color:var(--ink-soft); margin-bottom:8px}
+.byline .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--green-soft),var(--amber-soft)); display:flex;align-items:center;justify-content:center;color:var(--green);flex:none}
+.byline .av svg{width:22px;height:22px}
+.byline b{color:var(--ink)}
+.body{padding-top:30px}
+.body h2{font-size:clamp(22px,3vw,28px); margin:40px 0 8px}
+.body .ch{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-d);margin-bottom:4px}
+.body p{margin-bottom:1.15em}
+.body strong{color:var(--ink)}
+.lead-cap::first-letter{font-family:'Fraunces',serif; font-size:3.4em; line-height:.82; float:left; margin:6px 10px 0 0; color:var(--green); font-weight:600}
+.keep{display:flex;gap:13px;background:var(--green-tint);border:1px solid var(--green-soft);border-radius:14px;padding:15px 18px;margin:6px 0 24px;font-size:15px;color:var(--green-d)}
+.keep svg{width:20px;height:20px;color:var(--green);flex:none;margin-top:2px}
+.keep b{color:var(--green-d)}
+.pull{font-family:'Fraunces',serif; font-style:italic; font-size:clamp(22px,3.4vw,28px); line-height:1.35; color:var(--green); border-left:4px solid var(--amber); padding:6px 0 6px 24px; margin:34px 0}
+.authorbox{display:flex; gap:18px; align-items:flex-start; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:24px; margin:42px 0 0}
+.authorbox .av{width:56px;height:56px;border-radius:50%;background:linear-gradient(150deg,var(--green-soft),var(--amber-soft));display:flex;align-items:center;justify-content:center;color:var(--green);flex:none}
+.authorbox .av svg{width:28px;height:28px}
+.authorbox h3{font-size:18px; margin-bottom:6px}
+.authorbox p{font-size:14.5px; color:var(--ink-soft); margin:0}
+.cta-box{text-align:center; background:var(--green); color:#EAF1ED; border-radius:24px; padding:38px 26px; margin:46px 0 10px}
+.cta-box h3{color:#fff; font-size:clamp(21px,3vw,27px); margin-bottom:10px}
+.cta-box p{color:#BAD0C8; max-width:32em; margin:0 auto 22px; font-size:16px}
+.cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; gap:9px; font-family:inherit; font-weight:800; font-size:15px; padding:13px 22px; border-radius:999px; text-decoration:none; border:1.5px solid transparent; transition:transform .15s, background .2s}
+.btn-amber{background:var(--amber); color:#3a2a0e} .btn-amber:hover{background:#fff; transform:translateY(-2px)}
+.btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.4)} .btn-ghost:hover{background:rgba(255,255,255,.1); transform:translateY(-2px)}
+footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; color:var(--ink-faint); font-size:13px}
+footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
+@media (max-width:600px){ body{font-size:17px} .authorbox{flex-direction:column; gap:12px} }
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="index.html" aria-label="CuidarConSentido accueil">
+      <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#EAF1ED" stroke="#DCE8E1"/><path d="M5 22 C11 22 12 14 17 14 C22 14 23 22 29 22" stroke="#20564A" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="17" cy="11" r="3.4" fill="#DD9C44"/></svg>
+      <span><b>Cuidar</b><span>Con</span><b>Sentido</b></span>
+    </a>
+    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Accueil</a>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <span class="eyebrow">Recherche doctorale · Note de lecture</span>
+    <h1>Stimuler la cognition au crépuscule de la vie : le cadre théorique</h1>
+    <p class="standfirst">Synthèse de la partie théorique (chapitres 1 à 3) de ma thèse : de la personne au cerveau, puis à l’environnement résidentiel — et jusqu’au programme MAR.</p>
+    <div class="byline">
+      <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+      <span>Par <b>J. M. V. Hafashimana</b> · Thèse de doctorat, Université de Yaoundé I · Dir. : Pr. Mayi Marc Bruno</span>
+    </div>
+
+    <div class="body">
+      <p class="lead-cap">Les trois premiers chapitres de ma thèse constituent son cadre théorique. Ensemble, ils répondent à une même question fondatrice : comment le milieu de vie influence-t-il le fonctionnement cognitif des personnes âgées, et comment agir sur ce milieu pour le soutenir ? Le parcours va de la personne au cerveau, puis à l’environnement résidentiel, et converge vers le programme d’intervention MAR.</p>
+
+      <div class="ch">Chapitre 1</div>
+      <h2>Vieillesse, handicap et dignité</h2>
+      <p>Le premier chapitre pose l’appareil conceptuel. Il définit le vieillissement comme un processus multidimensionnel et profondément hétérogène : deux personnes du même âge peuvent présenter des états très différents, ce qui interdit toute lecture purement chronologique. Il distingue la déficience, l’incapacité et la situation de handicap, et adopte une perspective bio-psycho-sociale qui refuse de réduire la vieillesse au seul déclin biologique. Son concept central est la <strong>réserve cognitive</strong> : une ressource dynamique, construite tout au long de la vie, qui explique la variabilité face au vieillissement cérébral et fonde l’espoir d’une action efficace. Le chapitre établit enfin le socle éthique de la démarche — la dignité de la personne et les soins centrés sur la personne — relié aux cadres de l’OMS (vieillir en bonne santé, capacité intrinsèque, prévention).</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>À retenir.</b> Le vieillissement est pluriel et en partie modifiable ; la réserve cognitive et la dignité fondent l’action, qui résulte toujours de l’interaction entre la personne et son environnement.</span></div>
+
+      <div class="ch">Chapitre 2</div>
+      <h2>Neuropsychologie du vieillissement et déclin cognitif</h2>
+      <p>Le deuxième chapitre descend au niveau du cerveau et de la cognition. Il décrit les modifications cérébrales du grand âge — structurelles, fonctionnelles et neurochimiques — sans les confondre avec la pathologie, et rappelle que la plasticité et la neurogenèse persistent, quoique bornées. Les domaines cognitifs sont inégalement touchés : la vitesse de traitement, l’attention divisée et certaines fonctions exécutives déclinent, tandis que le langage, le vocabulaire et la mémoire sémantique restent largement préservés. La frontière entre vieillissement normal, <strong>déclin cognitif léger</strong> et démence est présentée comme un continuum graduel : le déclin cognitif léger occupe une position charnière et constitue une fenêtre d’intervention privilégiée. Le chapitre discute enfin l’apport et les limites des biomarqueurs, et insiste sur une évaluation neuropsychologique rigoureuse, appuyée sur des normes adaptées et menée avec une vigilance interculturelle.</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>À retenir.</b> Le cerveau âgé conserve des ressources réelles ; le déclin cognitif léger est une fenêtre d’action précoce ; la mesure doit être rigoureuse et culturellement prudente.</span></div>
+
+      <div class="ch">Chapitre 3</div>
+      <h2>Institutionnalisation et environnement résidentiel</h2>
+      <p>Le troisième chapitre relie la personne, son cerveau et son cadre de vie. Il analyse l’institutionnalisation comme un événement majeur aux effets ambivalents, et met au jour les mécanismes par lesquels un milieu mal pensé produit de la dépendance : surprotection et excès d’incapacité, script de dépendance, impuissance apprise, psychologie sociale maligne. À l’appui du modèle écologique de la compétence, il établit que l’environnement — physique, sensoriel, social et organisationnel — est un <strong>déterminant actif</strong> du fonctionnement cognitif, d’autant plus décisif que la personne est fragile. Il présente ensuite les modèles d’environnements capacitants — soins centrés sur la personne, atención centrada en la persona à l’espagnole, unités de petite taille, restauration du contrôle et du choix — ainsi que le rôle des <strong>histoires de vie</strong> et de la réminiscence dans la préservation de l’identité. Une mise en perspective interculturelle confronte enfin le modèle résidentiel occidental aux solidarités communautaires africaines.</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>À retenir.</b> L’environnement résidentiel peut aggraver ou soutenir le fonctionnement ; un milieu capacitant et les histoires de vie préservent à la fois la cognition et la dignité.</span></div>
+
+      <h2>Le fil conducteur</h2>
+      <p>Un même principe unifie l’ensemble : le fonctionnement de la personne âgée résulte de l’interaction entre ses ressources internes et son environnement, et cet environnement constitue un levier d’action décisif — d’autant plus que la personne est vulnérable. De ce principe découle une chaîne cohérente : la réserve cognitive est ce que l’on cherche à renforcer ; la plasticité cérébrale est ce qui rend l’action possible ; la dignité et les soins centrés sur la personne en sont la boussole éthique ; et la réciprocité euro-africaine en dessine l’horizon — l’Occident apportant sa méthode, l’Afrique sa culture de la solidarité intergénérationnelle.</p>
+
+      <p class="pull">« L’environnement n’est pas le décor du vieillissement : il en est un acteur. »</p>
+
+      <h2>Aboutissement : le programme MAR</h2>
+      <p>Cette convergence fonde directement le programme <strong>MAR (Modulation Ambiante et Réserve cognitive)</strong>, qui traduit le cadre théorique en intervention concrète : agir sur l’environnement résidentiel tout en mobilisant activement les ressources préservées de la personne. Chacune de ses modalités — réduction de la charge attentionnelle, neutralisation de la surprotection, histoires de vie, participation, et soutien des aidants par l’application cuidaApp — correspond à un concept validé dans les chapitres précédents. La partie théorique conduit ainsi logiquement à la problématique, aux hypothèses et au dispositif d’intervention développés dans la suite de la thèse.</p>
+
+      <div class="authorbox">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <div>
+          <h3>À propos</h3>
+          <p>Jean Marie Vianney Hafashimana est psychologue spécialisé en gérontologie et neuropsychologie. Cette note de lecture synthétise la partie théorique de sa thèse de doctorat en cours, « Stimulation cognitive au crépuscule de la vie » (Université de Yaoundé I).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Le programme MAR, en pratique</h3>
+      <p>Découvrez comment ce cadre théorique se traduit en accompagnement concret des personnes âgées.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="articulo-mar.html">Lire l’article sur le MAR</a>
+        <a class="btn btn-ghost" href="index.html">Retour à l’accueil</a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="disc">Note de lecture à caractère divulgatif, synthétisant le cadre théorique d’une thèse de doctorat en cours.</div>
+    © <span id="yr"></span> CuidarConSentido · J. M. V. Hafashimana
+  </div>
+</footer>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
