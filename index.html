@@ -102,6 +102,11 @@ section{padding:78px 0}
 .cat .lk{display:inline-flex; align-items:center; gap:7px; font-weight:800; font-size:14.5px; color:var(--green)}
 .cat .lk svg{width:15px;height:15px; transition:transform .15s}
 .cat:hover .lk svg{transform:translate(3px,-3px)}
+.cat .prods{display:flex; flex-direction:column; gap:8px; margin-top:auto}
+.cat .prods a{display:flex; align-items:center; gap:8px; font-weight:700; font-size:13.8px; color:var(--green); text-decoration:none; padding:10px 13px; border:1px solid var(--line); border-radius:11px; background:var(--paper); transition:background .15s, border-color .15s}
+.cat .prods a:hover{background:var(--green-tint); border-color:var(--green-soft)}
+.cat .prods a svg{width:14px;height:14px; margin-left:auto; color:var(--ink-faint)}
+.cat .soon{margin-top:auto; display:inline-block; font-size:12.5px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-faint); background:var(--paper); border:1px dashed var(--line2); border-radius:999px; padding:7px 14px; align-self:flex-start}
 .aff-note{margin-top:30px; display:flex; align-items:flex-start; gap:12px; background:var(--green-tint); border:1px solid var(--green-soft); border-radius:var(--r-sm); padding:15px 18px; font-size:13.5px; color:var(--ink-soft)}
 .aff-note svg{width:18px;height:18px;color:var(--green);flex:none;margin-top:2px}
 
@@ -304,42 +309,61 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
       <p>Categorías pensadas para la autonomía, la seguridad y el bienestar. Cada selección enlaza a productos de tiendas como Amazon y otros socios.</p>
     </div>
     <div class="cat-grid">
-      <a class="cat" href="https://amzn.to/4eAr3yv" target="_blank" rel="noopener sponsored">
+      <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <h3>Orientación y memoria</h3>
         <p>Relojes con día y fecha grandes, calendarios, pastilleros semanales y recordatorios que dan tranquilidad.</p>
-        <span class="lk">Ver en Amazon <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-      </a>
-      <a class="cat" href="#" data-aff>
+        <div class="prods">
+          <a href="https://amzn.to/4eAr3yv" target="_blank" rel="noopener sponsored">Reloj con día y fecha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4gLeX71" target="_blank" rel="noopener sponsored">Ver más relojes para mayores <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+      <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 12h4l2 6 4-12 2 6h6"/></svg></div>
         <h3>Estimulación cognitiva</h3>
         <p>Cuadernos de ejercicios, juegos de memoria, puzzles adaptados y material para mantener la mente activa.</p>
-        <span class="lk">Ver selección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-      </a>
-      <a class="cat" href="#" data-aff>
+        <div class="prods">
+          <a href="https://amzn.to/4xY18IH" target="_blank" rel="noopener sponsored">Juegos de estimulación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/44BSKku" target="_blank" rel="noopener sponsored">Cuaderno de ejercicios <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4wmZUFs" target="_blank" rel="noopener sponsored">Ver más juegos y cuadernos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+      <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 21v-7M4 14c4-2 6 2 10 0M4 7c4-2 6 2 10 0V3"/><circle cx="18" cy="17" r="3"/></svg></div>
         <h3>Seguridad y movilidad</h3>
         <p>Asideros, alfombras antideslizantes, bastones, andadores y pequeñas ayudas que previenen caídas.</p>
-        <span class="lk">Ver selección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-      </a>
-      <a class="cat" href="#" data-aff>
+        <div class="prods">
+          <a href="https://amzn.to/4b1h1nL" target="_blank" rel="noopener sponsored">Andador <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4g9sDZp" target="_blank" rel="noopener sponsored">Ver más andadores y sillas de ruedas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+      <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 11h14l-1 9H6z"/><path d="M9 11V7a3 3 0 016 0v4"/></svg></div>
         <h3>Vida diaria y autonomía</h3>
         <p>Cubiertos adaptados, abre-tarros, calzadores largos y utensilios que devuelven independencia en el día a día.</p>
-        <span class="lk">Ver selección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-      </a>
-      <a class="cat" href="#" data-aff>
+        <div class="prods">
+          <a href="https://amzn.to/4fbvos8" target="_blank" rel="noopener sponsored">Abridor de tarros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+      <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 5h16v11H4z"/><path d="M8 20h8M9 9l2 2 4-4"/></svg></div>
         <h3>Comunicación y sentidos</h3>
         <p>Teléfonos de teclas grandes, amplificadores de sonido, lupas con luz y gafas de lectura cómodas.</p>
-        <span class="lk">Ver selección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-      </a>
-      <a class="cat" href="#" data-aff>
+        <div class="prods">
+          <a href="https://amzn.to/4voK0tj" target="_blank" rel="noopener sponsored">Teléfonos de teclas grandes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4v54JSI" target="_blank" rel="noopener sponsored">Auriculares <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4eEftm6" target="_blank" rel="noopener sponsored">Más teléfonos adaptados <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
+      <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 18v-6a4 4 0 014-4h10a4 4 0 014 4v6"/><path d="M3 15h18M7 8V6"/></svg></div>
         <h3>Descanso y confort</h3>
         <p>Cojines posturales, mantas suaves, protectores y pequeños detalles que mejoran el descanso.</p>
-        <span class="lk">Ver selección <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></span>
-      </a>
+        <div class="prods">
+          <a href="https://amzn.to/4xVLHR5" target="_blank" rel="noopener sponsored">Cojín <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4v7awaj" target="_blank" rel="noopener sponsored">Almohadas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+        </div>
+      </div>
     </div>
     <div class="aff-note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-5M12 8h.01"/></svg>
