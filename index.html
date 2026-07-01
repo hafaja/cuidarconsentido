@@ -196,6 +196,11 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
   [data-reveal]{transition:none; opacity:1; transform:none}
   .btn:hover,.pillar:hover,.cat:hover,.topic:hover,.art:hover{transform:none}
 }
+.langsel{display:inline-flex;border:1.5px solid var(--line2);border-radius:999px;overflow:hidden;background:var(--bg2);margin-right:4px}
+.langsel button{font-family:inherit;font-weight:800;font-size:12px;letter-spacing:.03em;padding:6px 11px;background:none;border:none;cursor:pointer;color:var(--ink-soft);transition:background .15s,color .15s}
+.langsel button[aria-pressed="true"]{background:var(--green);color:#fff}
+.langsel button:hover{color:var(--green)}
+.langsel button[aria-pressed="true"]:hover{color:#fff}
 </style>
 </head>
 <body>
@@ -215,14 +220,15 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="nav-links" id="navlinks">
-      <a href="#productos">Productos</a>
-      <a href="#conocimiento">Conocimiento</a>
-      <a href="#video">Vídeo</a>
-      <a href="#articulos">Artículos</a>
-      <a href="#lecturas">Lecturas</a>
+      <a href="#productos" data-i18n="nav_productos">Productos</a>
+      <a href="#conocimiento" data-i18n="nav_conocimiento">Conocimiento</a>
+      <a href="#video" data-i18n="nav_video">Vídeo</a>
+      <a href="#articulos" data-i18n="nav_articulos">Artículos</a>
+      <a href="#lecturas" data-i18n="nav_lecturas">Lecturas</a>
       <a href="#app">cuidaApp</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a class="btn btn-primary nav-cta" href="#contacto">Contacto</a>
+      <a href="#sobre-mi" data-i18n="nav_sobremi">Sobre mí</a>
+      <div class="langsel" role="group" aria-label="Idioma"><button id="lang-es" aria-pressed="true" onclick="setLang('es')">ES</button><button id="lang-fr" aria-pressed="false" onclick="setLang('fr')">FR</button><button id="lang-en" aria-pressed="false" onclick="setLang('en')">EN</button></div>
+      <a class="btn btn-primary nav-cta" href="#contacto" data-i18n="nav_contacto">Contacto</a>
     </nav>
   </div>
 </header>
@@ -231,16 +237,16 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section class="hero" id="inicio">
   <div class="wrap hero-in">
     <div>
-      <span class="eyebrow">Acompañar el envejecimiento cognitivo</span>
-      <h1>Cuidar con <em>sentido</em>, decidir con criterio.</h1>
-      <p class="lede">Productos bien escogidos para personas mayores y conocimiento riguroso sobre la mente que envejece. Un mismo lugar para quien cuida, acompaña o investiga.</p>
+      <span class="eyebrow" data-i18n="hero_eyebrow">Acompañar el envejecimiento cognitivo</span>
+      <h1 data-i18n="hero_h1">Cuidar con <em>sentido</em>, decidir con criterio.</h1>
+      <p class="lede" data-i18n="hero_lede">Productos bien escogidos para personas mayores y conocimiento riguroso sobre la mente que envejece. Un mismo lugar para quien cuida, acompaña o investiga.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#productos">Ver productos recomendados
+        <a class="btn btn-primary" href="#productos"><span data-i18n="hero_btn1">Ver productos recomendados</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#conocimiento">Explorar el conocimiento</a>
+        <a class="btn btn-ghost" href="#conocimiento" data-i18n="hero_btn2">Explorar el conocimiento</a>
       </div>
-      <div class="hero-mini"><span class="dot"></span> Selección honesta · Sin coste para ti · Basado en evidencia</div>
+      <div class="hero-mini"><span class="dot"></span> <span data-i18n="hero_mini">Selección honesta · Sin coste para ti · Basado en evidencia</span></div>
     </div>
     <div class="hero-art" data-reveal>
       <svg viewBox="0 0 460 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración de un amanecer cálido sobre un camino">
@@ -267,9 +273,9 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <!-- TRUST -->
 <div class="trust">
   <div class="wrap trust-in">
-    <div class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3 7.2 17l.9-5.4L4.2 7.7l5.4-.8z"/></svg> <span>Curado por <b>Jean&nbsp;M.&nbsp;Vianney</b>, psicólogo</span></div>
-    <div class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 9l7-6 7 6"/><circle cx="12" cy="13" r="3"/></svg> <span>Gerontología neuropsicológica</span></div>
-    <div class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span>Recomendaciones honestas, sin presión</span></div>
+    <div class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19.3 7.2 17l.9-5.4L4.2 7.7l5.4-.8z"/></svg> <span data-i18n="trust1">Curado por <b>Jean&nbsp;M.&nbsp;Vianney</b>, psicólogo</span></div>
+    <div class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M5 9l7-6 7 6"/><circle cx="12" cy="13" r="3"/></svg> <span data-i18n="trust2">Gerontología neuropsicológica</span></div>
+    <div class="tg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> <span data-i18n="trust3">Recomendaciones honestas, sin presión</span></div>
   </div>
 </div>
 
@@ -277,25 +283,25 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section>
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Qué encontrarás aquí</span>
-      <h2>Tres formas de cuidar mejor</h2>
-      <p>CuidarConSentido reúne lo práctico y lo riguroso: lo que necesitas comprar y lo que necesitas entender.</p>
+      <span class="eyebrow" data-i18n="pill_eyebrow">Qué encontrarás aquí</span>
+      <h2 data-i18n="pill_h2">Tres formas de cuidar mejor</h2>
+      <p data-i18n="pill_p">CuidarConSentido reúne lo práctico y lo riguroso: lo que necesitas comprar y lo que necesitas entender.</p>
     </div>
     <div class="pillars">
       <div class="pillar" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 2h12l2 6H4z"/><path d="M4 8v12a2 2 0 002 2h12a2 2 0 002-2V8"/><path d="M9 13h6"/></svg></div>
-        <h3>Productos seleccionados</h3>
-        <p>Artículos útiles para la vida diaria, la seguridad y la estimulación, escogidos pensando en la persona mayor y en quien la cuida.</p>
+        <h3 data-i18n="pill1_h3">Productos seleccionados</h3>
+        <p data-i18n="pill1_p">Artículos útiles para la vida diaria, la seguridad y la estimulación, escogidos pensando en la persona mayor y en quien la cuida.</p>
       </div>
       <div class="pillar" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 5a2 2 0 012-2h12v18H6a2 2 0 01-2-2z"/><path d="M18 3v18"/><path d="M8 8h6M8 12h6"/></svg></div>
-        <h3>Conocimiento riguroso</h3>
-        <p>Divulgación clara sobre neuropsicología, psicopedagogía, deterioro cognitivo y diversidad mental, con base científica.</p>
+        <h3 data-i18n="pill2_h3">Conocimiento riguroso</h3>
+        <p data-i18n="pill2_p">Divulgación clara sobre neuropsicología, psicopedagogía, deterioro cognitivo y diversidad mental, con base científica.</p>
       </div>
       <div class="pillar" data-reveal>
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s-7-4.5-9-9a4.5 4.5 0 018-3 4.5 4.5 0 018 3c-2 4.5-7 9-7 9z"/></svg></div>
-        <h3>Acompañamiento profesional</h3>
-        <p>Detrás de la web hay un psicólogo especializado. Si necesitas orientación personal, puedes escribir y contar tu caso.</p>
+        <h3 data-i18n="pill3_h3">Acompañamiento profesional</h3>
+        <p data-i18n="pill3_p">Detrás de la web hay un psicólogo especializado. Si necesitas orientación personal, puedes escribir y contar tu caso.</p>
       </div>
     </div>
   </div>
@@ -305,70 +311,70 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section class="products" id="productos">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Productos para personas mayores</span>
-      <h2>Lo que de verdad ayuda en casa</h2>
-      <p>Categorías pensadas para la autonomía, la seguridad y el bienestar. Cada selección enlaza a productos de tiendas como Amazon y otros socios.</p>
+      <span class="eyebrow" data-i18n="prod_eyebrow">Productos para personas mayores</span>
+      <h2 data-i18n="prod_h2">Lo que de verdad ayuda en casa</h2>
+      <p data-i18n="prod_p">Categorías pensadas para la autonomía, la seguridad y el bienestar. Cada selección enlaza a productos de tiendas como Amazon y otros socios.</p>
     </div>
     <div class="cat-grid">
       <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-        <h3>Orientación y memoria</h3>
-        <p>Relojes con día y fecha grandes, calendarios, pastilleros semanales y recordatorios que dan tranquilidad.</p>
+        <h3 data-i18n="cat1_h3">Orientación y memoria</h3>
+        <p data-i18n="cat1_p">Relojes con día y fecha grandes, calendarios, pastilleros semanales y recordatorios que dan tranquilidad.</p>
         <div class="prods">
-          <a href="https://amzn.to/4eAr3yv" target="_blank" rel="noopener sponsored">Reloj con día y fecha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/4gLeX71" target="_blank" rel="noopener sponsored">Ver más relojes para mayores <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4eAr3yv" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_reloj">Reloj con día y fecha</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4gLeX71" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_vermas_relojes">Ver más relojes para mayores</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </div>
       <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 12h4l2 6 4-12 2 6h6"/></svg></div>
-        <h3>Estimulación cognitiva</h3>
-        <p>Cuadernos de ejercicios, juegos de memoria, puzzles adaptados y material para mantener la mente activa.</p>
+        <h3 data-i18n="cat2_h3">Estimulación cognitiva</h3>
+        <p data-i18n="cat2_p">Cuadernos de ejercicios, juegos de memoria, puzzles adaptados y material para mantener la mente activa.</p>
         <div class="prods">
-          <a href="https://amzn.to/4xY18IH" target="_blank" rel="noopener sponsored">Juegos de estimulación <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/44BSKku" target="_blank" rel="noopener sponsored">Cuaderno de ejercicios <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/4wmZUFs" target="_blank" rel="noopener sponsored">Ver más juegos y cuadernos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4xY18IH" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_juegos">Juegos de estimulación</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/44BSKku" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_cuaderno">Cuaderno de ejercicios</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4wmZUFs" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_vermas_juegos">Ver más juegos y cuadernos</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </div>
       <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 21v-7M4 14c4-2 6 2 10 0M4 7c4-2 6 2 10 0V3"/><circle cx="18" cy="17" r="3"/></svg></div>
-        <h3>Seguridad y movilidad</h3>
-        <p>Asideros, alfombras antideslizantes, bastones, andadores y pequeñas ayudas que previenen caídas.</p>
+        <h3 data-i18n="cat3_h3">Seguridad y movilidad</h3>
+        <p data-i18n="cat3_p">Asideros, alfombras antideslizantes, bastones, andadores y pequeñas ayudas que previenen caídas.</p>
         <div class="prods">
-          <a href="https://amzn.to/4b1h1nL" target="_blank" rel="noopener sponsored">Andador <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/4g9sDZp" target="_blank" rel="noopener sponsored">Ver más andadores y sillas de ruedas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4b1h1nL" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_andador">Andador</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4g9sDZp" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_vermas_andadores">Ver más andadores y sillas de ruedas</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </div>
       <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 11h14l-1 9H6z"/><path d="M9 11V7a3 3 0 016 0v4"/></svg></div>
-        <h3>Vida diaria y autonomía</h3>
-        <p>Cubiertos adaptados, abre-tarros, calzadores largos y utensilios que devuelven independencia en el día a día.</p>
+        <h3 data-i18n="cat4_h3">Vida diaria y autonomía</h3>
+        <p data-i18n="cat4_p">Cubiertos adaptados, abre-tarros, calzadores largos y utensilios que devuelven independencia en el día a día.</p>
         <div class="prods">
-          <a href="https://amzn.to/4fbvos8" target="_blank" rel="noopener sponsored">Abridor de tarros <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4fbvos8" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_abridor">Abridor de tarros</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </div>
       <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 5h16v11H4z"/><path d="M8 20h8M9 9l2 2 4-4"/></svg></div>
-        <h3>Comunicación y sentidos</h3>
-        <p>Teléfonos de teclas grandes, amplificadores de sonido, lupas con luz y gafas de lectura cómodas.</p>
+        <h3 data-i18n="cat5_h3">Comunicación y sentidos</h3>
+        <p data-i18n="cat5_p">Teléfonos de teclas grandes, amplificadores de sonido, lupas con luz y gafas de lectura cómodas.</p>
         <div class="prods">
-          <a href="https://amzn.to/4voK0tj" target="_blank" rel="noopener sponsored">Teléfonos de teclas grandes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/4v54JSI" target="_blank" rel="noopener sponsored">Auriculares <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/4eEftm6" target="_blank" rel="noopener sponsored">Más teléfonos adaptados <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4voK0tj" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_telefonos">Teléfonos de teclas grandes</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4v54JSI" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_auriculares">Auriculares</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4eEftm6" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_mas_telefonos">Más teléfonos adaptados</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </div>
       <div class="cat">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 18v-6a4 4 0 014-4h10a4 4 0 014 4v6"/><path d="M3 15h18M7 8V6"/></svg></div>
-        <h3>Descanso y confort</h3>
-        <p>Cojines posturales, mantas suaves, protectores y pequeños detalles que mejoran el descanso.</p>
+        <h3 data-i18n="cat6_h3">Descanso y confort</h3>
+        <p data-i18n="cat6_p">Cojines posturales, mantas suaves, protectores y pequeños detalles que mejoran el descanso.</p>
         <div class="prods">
-          <a href="https://amzn.to/4xVLHR5" target="_blank" rel="noopener sponsored">Cojín <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
-          <a href="https://amzn.to/4v7awaj" target="_blank" rel="noopener sponsored">Almohadas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4xVLHR5" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_cojin">Cojín</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <a href="https://amzn.to/4v7awaj" target="_blank" rel="noopener sponsored"><span data-i18n="lbl_almohadas">Almohadas</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
         </div>
       </div>
     </div>
     <div class="aff-note">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-5M12 8h.01"/></svg>
-      <span>Algunos enlaces son de afiliado: si compras a través de ellos, CuidarConSentido puede recibir una pequeña comisión <b>sin que a ti te cueste más</b>. Solo recomendamos lo que consideramos útil.</span>
+      <span data-i18n="aff_note">Algunos enlaces son de afiliado: si compras a través de ellos, CuidarConSentido puede recibir una pequeña comisión <b>sin que a ti te cueste más</b>. Solo recomendamos lo que consideramos útil.</span>
     </div>
   </div>
 </section>
@@ -377,40 +383,40 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section id="conocimiento">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Centro de conocimiento</span>
-      <h2>Entender la mente que envejece</h2>
-      <p>Material divulgativo y profesional sobre la cognición, el aprendizaje y la diversidad mental, escrito para familias, cuidadores y estudiantes.</p>
+      <span class="eyebrow" data-i18n="know_eyebrow">Centro de conocimiento</span>
+      <h2 data-i18n="know_h2">Entender la mente que envejece</h2>
+      <p data-i18n="know_p">Material divulgativo y profesional sobre la cognición, el aprendizaje y la diversidad mental, escrito para familias, cuidadores y estudiantes.</p>
     </div>
     <div class="know-grid">
       <div class="topic" data-reveal>
-        <div class="tn">01</div><h3>Neuropsicología</h3>
-        <p>Cómo se relacionan el cerebro y la conducta: memoria, atención, lenguaje y funciones ejecutivas, y cómo se evalúan.</p>
-        <a class="lk" href="#contacto">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="tn">01</div><h3 data-i18n="topic1_h3">Neuropsicología</h3>
+        <p data-i18n="topic1_p">Cómo se relacionan el cerebro y la conducta: memoria, atención, lenguaje y funciones ejecutivas, y cómo se evalúan.</p>
+        <a class="lk" href="#contacto"><span data-i18n="read_more">Leer más</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="topic" data-reveal>
-        <div class="tn">02</div><h3>Psicopedagogía</h3>
-        <p>El aprendizaje a lo largo de toda la vida y cómo seguir estimulando capacidades, también en la edad avanzada.</p>
-        <a class="lk" href="#contacto">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="tn">02</div><h3 data-i18n="topic2_h3">Psicopedagogía</h3>
+        <p data-i18n="topic2_p">El aprendizaje a lo largo de toda la vida y cómo seguir estimulando capacidades, también en la edad avanzada.</p>
+        <a class="lk" href="#contacto"><span data-i18n="read_more">Leer más</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="topic" data-reveal>
-        <div class="tn">03</div><h3>Discapacidad y diversidad mental</h3>
-        <p>Una mirada de derechos e inclusión: comprender, acompañar y no reducir a la persona a su diagnóstico.</p>
-        <a class="lk" href="articulo-autismo.html">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="tn">03</div><h3 data-i18n="topic3_h3">Discapacidad y diversidad mental</h3>
+        <p data-i18n="topic3_p">Una mirada de derechos e inclusión: comprender, acompañar y no reducir a la persona a su diagnóstico.</p>
+        <a class="lk" href="articulo-autismo.html"><span data-i18n="read_more">Leer más</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="topic" data-reveal>
-        <div class="tn">04</div><h3>Deterioro cognitivo leve</h3>
-        <p>Qué es, qué señales conviene observar y cómo distinguirlo del envejecimiento normal y de la demencia.</p>
-        <a class="lk" href="#contacto">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="tn">04</div><h3 data-i18n="topic4_h3">Deterioro cognitivo leve</h3>
+        <p data-i18n="topic4_p">Qué es, qué señales conviene observar y cómo distinguirlo del envejecimiento normal y de la demencia.</p>
+        <a class="lk" href="#contacto"><span data-i18n="read_more">Leer más</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="topic" data-reveal>
-        <div class="tn">05</div><h3>Estimulación cognitiva</h3>
-        <p>Qué dice la evidencia sobre mantener la mente activa y cómo diseñar actividades con sentido en casa.</p>
-        <a class="lk" href="articulo-mar.html">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="tn">05</div><h3 data-i18n="topic5_h3">Estimulación cognitiva</h3>
+        <p data-i18n="topic5_p">Qué dice la evidencia sobre mantener la mente activa y cómo diseñar actividades con sentido en casa.</p>
+        <a class="lk" href="articulo-mar.html"><span data-i18n="read_more">Leer más</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="topic" data-reveal>
-        <div class="tn">06</div><h3>Familias y cuidadores</h3>
-        <p>Cuidar también cansa. Recursos para sostener al cuidador y prevenir la sobrecarga emocional.</p>
-        <a class="lk" href="articulo-cuidadores.html">Leer más <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="tn">06</div><h3 data-i18n="topic6_h3">Familias y cuidadores</h3>
+        <p data-i18n="topic6_p">Cuidar también cansa. Recursos para sostener al cuidador y prevenir la sobrecarga emocional.</p>
+        <a class="lk" href="articulo-cuidadores.html"><span data-i18n="read_more">Leer más</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </div>
@@ -420,24 +426,24 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section id="video" style="background:linear-gradient(180deg,var(--paper),var(--bg));border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Vídeos</span>
-      <h2>Aprende y acompaña, en vídeo</h2>
-      <p>Explico de forma sencilla cómo estimular la mente de las personas mayores y cómo cuidar a quien cuida.</p>
+      <span class="eyebrow" data-i18n="vid_eyebrow">Vídeos</span>
+      <h2 data-i18n="vid_h2">Aprende y acompaña, en vídeo</h2>
+      <p data-i18n="vid_p">Explico de forma sencilla cómo estimular la mente de las personas mayores y cómo cuidar a quien cuida.</p>
     </div>
     <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px;max-width:980px;margin:0 auto">
       <div>
         <div style="position:relative;width:100%;padding-top:56.25%;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#000">
           <iframe src="https://www.youtube-nocookie.com/embed/3SWs0HrvMig" title="Estimulación cognitiva: memoria, atención y lenguaje · CuidarConSentido" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
         </div>
-        <h3 style="font-size:18px;margin:14px 0 4px">Estimular la memoria, la atención y el lenguaje</h3>
-        <p style="font-size:14px;color:var(--ink-faint);margin:0"><a href="https://www.youtube.com/watch?v=3SWs0HrvMig" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Ver en YouTube</a></p>
+        <h3 style="font-size:18px;margin:14px 0 4px" data-i18n="vid1_h3">Estimular la memoria, la atención y el lenguaje</h3>
+        <p style="font-size:14px;color:var(--ink-faint);margin:0"><a href="https://www.youtube.com/watch?v=3SWs0HrvMig" target="_blank" rel="noopener" style="color:var(--green);font-weight:700"><span data-i18n="watch_yt">Ver en YouTube</span></a></p>
       </div>
       <div>
         <div style="position:relative;width:100%;padding-top:56.25%;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:#000">
           <iframe src="https://www.youtube-nocookie.com/embed/w3s5ioSLDMQ" title="Apoyo y orientación para cuidadores · CuidarConSentido" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
         </div>
-        <h3 style="font-size:18px;margin:14px 0 4px">Para cuidadores: cuando no sabes qué hacer</h3>
-        <p style="font-size:14px;color:var(--ink-faint);margin:0"><a href="https://www.youtube.com/watch?v=w3s5ioSLDMQ" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Ver en YouTube</a></p>
+        <h3 style="font-size:18px;margin:14px 0 4px" data-i18n="vid2_h3">Para cuidadores: cuando no sabes qué hacer</h3>
+        <p style="font-size:14px;color:var(--ink-faint);margin:0"><a href="https://www.youtube.com/watch?v=w3s5ioSLDMQ" target="_blank" rel="noopener" style="color:var(--green);font-weight:700"><span data-i18n="watch_yt">Ver en YouTube</span></a></p>
       </div>
     </div>
   </div>
@@ -447,28 +453,28 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section class="articles" id="articulos">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Serie · Envejecimiento y cognición</span>
-      <h2>Artículos destacados</h2>
-      <p>Lecturas breves que conectan la ciencia con el día a día del cuidado.</p>
+      <span class="eyebrow" data-i18n="art_eyebrow">Serie · Envejecimiento y cognición</span>
+      <h2 data-i18n="art_h2">Artículos destacados</h2>
+      <p data-i18n="art_p">Lecturas breves que conectan la ciencia con el día a día del cuidado.</p>
     </div>
     <div class="art-grid">
       <a class="art" href="articulo-autismo.html" data-reveal>
-        <div class="tag">Neurodesarrollo y vejez · ES/FR</div>
-        <h3>Cuando el entorno cuida</h3>
-        <p>Lo que la atención en niños con autismo nos enseña sobre acompañar a las personas mayores con deterioro cognitivo.</p>
-        <span class="lk">Leer el artículo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="tag" data-i18n="art1_tag">Neurodesarrollo y vejez · ES/FR</div>
+        <h3 data-i18n="art1_h3">Cuando el entorno cuida</h3>
+        <p data-i18n="art1_p">Lo que la atención en niños con autismo nos enseña sobre acompañar a las personas mayores con deterioro cognitivo.</p>
+        <span class="lk"><span data-i18n="read_article">Leer el artículo</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a class="art" href="articulo-mar.html" data-reveal>
-        <div class="tag">Programa MAR · ES/FR</div>
-        <h3>El programa MAR</h3>
-        <p>Estimular la mente sin olvidar a la persona: las cinco claves de mi programa de acompañamiento para personas mayores.</p>
-        <span class="lk">Leer el artículo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="tag" data-i18n="art2_tag">Programa MAR · ES/FR</div>
+        <h3 data-i18n="art2_h3">El programa MAR</h3>
+        <p data-i18n="art2_p">Estimular la mente sin olvidar a la persona: las cinco claves de mi programa de acompañamiento para personas mayores.</p>
+        <span class="lk"><span data-i18n="read_article">Leer el artículo</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a class="art" href="articulo-cuidadores.html" data-reveal>
-        <div class="tag">Cuidadores · ES/FR</div>
-        <h3>Cuidar de quien cuida</h3>
-        <p>Cinco claves para sostener al cuidador y prevenir el agotamiento. No se puede dar lo que no se tiene.</p>
-        <span class="lk">Leer el artículo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="tag" data-i18n="art3_tag">Cuidadores · ES/FR</div>
+        <h3 data-i18n="art3_h3">Cuidar de quien cuida</h3>
+        <p data-i18n="art3_p">Cinco claves para sostener al cuidador y prevenir el agotamiento. No se puede dar lo que no se tiene.</p>
+        <span class="lk"><span data-i18n="read_article">Leer el artículo</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
   </div>
@@ -478,24 +484,24 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section id="lecturas">
   <div class="wrap">
     <div class="sec-head" data-reveal>
-      <span class="eyebrow">Lecturas y recursos</span>
-      <h2>Para seguir aprendiendo</h2>
-      <p>Reseñas de libros y materiales de referencia en gerontología, neuropsicología y cuidado de personas mayores.</p>
+      <span class="eyebrow" data-i18n="lec_eyebrow">Lecturas y recursos</span>
+      <h2 data-i18n="lec_h2">Para seguir aprendiendo</h2>
+      <p data-i18n="lec_p">Reseñas de libros y materiales de referencia en gerontología, neuropsicología y cuidado de personas mayores.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:42px">
       <a href="articulo-libro-envejecer.html" style="display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-decoration:none;box-shadow:var(--shadow);transition:transform .2s,border-color .2s">
         <div style="width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--amber-soft);color:var(--amber-d);margin-bottom:16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 5a2 2 0 012-2h12a1 1 0 011 1v15a1 1 0 01-1 1H6a2 2 0 01-2-2z"/><path d="M8 7h7M8 11h7"/></svg></div>
-        <div style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)">Reseña · Libro</div>
+        <div style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)"><span data-i18n="lec1_kicker">Reseña · Libro</span></div>
         <h3 style="font-size:20px;margin:8px 0 8px;color:var(--ink)">Programa de entrenamiento para envejecer activamente</h3>
-        <p style="color:var(--ink-soft);font-size:14.7px;flex:1;margin:0 0 16px">Un manual práctico de Editorial CCS para la estimulación cognitiva y el bienestar de las personas mayores.</p>
-        <span style="display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:14.5px;color:var(--green)">Leer la reseña <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <p style="color:var(--ink-soft);font-size:14.7px;flex:1;margin:0 0 16px"><span data-i18n="lec1_p">Un manual práctico de Editorial CCS para la estimulación cognitiva y el bienestar de las personas mayores.</span></p>
+        <span style="display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:14.5px;color:var(--green)"><span data-i18n="lec1_link">Leer la reseña</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
       <a href="articulo-tesis-teorico.html" style="display:flex;flex-direction:column;background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);padding:26px;text-decoration:none;box-shadow:var(--shadow);transition:transform .2s,border-color .2s">
         <div style="width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--green-tint);color:var(--green);margin-bottom:16px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></div>
-        <div style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)">Investigación · FR</div>
-        <h3 style="font-size:20px;margin:8px 0 8px;color:var(--ink)">El marco teórico de mi tesis (Cap. 1-3)</h3>
-        <p style="color:var(--ink-soft);font-size:14.7px;flex:1;margin:0 0 16px">Síntesis sobre vejez y dignidad, neuropsicología del envejecimiento, entorno residencial y el programa MAR.</p>
-        <span style="display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:14.5px;color:var(--green)">Lire la note <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div style="font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green)"><span data-i18n="lec2_kicker">Investigación · FR</span></div>
+        <h3 style="font-size:20px;margin:8px 0 8px;color:var(--ink)"><span data-i18n="lec2_h3">El marco teórico de mi tesis (Cap. 1-3)</span></h3>
+        <p style="color:var(--ink-soft);font-size:14.7px;flex:1;margin:0 0 16px"><span data-i18n="lec2_p">Síntesis sobre vejez y dignidad, neuropsicología del envejecimiento, entorno residencial y el programa MAR.</span></p>
+        <span style="display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:14.5px;color:var(--green)"><span data-i18n="lec2_link">Lire la note</span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
   </div>
@@ -506,12 +512,12 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
   <div class="wrap">
     <div data-reveal style="background:var(--green);border-radius:26px;padding:46px 34px;color:#EAF1ED;display:flex;gap:34px;align-items:center;flex-wrap:wrap;box-shadow:var(--shadow)">
       <div style="flex:1;min-width:260px">
-        <span class="eyebrow" style="color:var(--amber-soft)">La app · cuidaApp</span>
-        <h2 style="color:#fff;margin:8px 0 12px;font-size:clamp(26px,3.6vw,34px)">Lleva el cuidado contigo, cada día</h2>
-        <p style="color:#C3D6CE;max-width:34em;margin:0 0 22px;font-size:16.5px">cuidaApp es la aplicación de CuidarConSentido para acompañar a cuidadores de personas con deterioro cognitivo: consejos diarios, actividades de estimulación y apoyo, en tu móvil y en varios idiomas.</p>
+        <span class="eyebrow" style="color:var(--amber-soft)" data-i18n="app_eyebrow">La app · cuidaApp</span>
+        <h2 style="color:#fff;margin:8px 0 12px;font-size:clamp(26px,3.6vw,34px)" data-i18n="app_h2">Lleva el cuidado contigo, cada día</h2>
+        <p style="color:#C3D6CE;max-width:34em;margin:0 0 22px;font-size:16.5px" data-i18n="app_p">cuidaApp es la aplicación de CuidarConSentido para acompañar a cuidadores de personas con deterioro cognitivo: consejos diarios, actividades de estimulación y apoyo, en tu móvil y en varios idiomas.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn-amber" href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener" style="background:var(--amber);color:#3a2a0e;font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none">Abrir cuidaApp</a>
-          <a class="btn" href="#contacto" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none">Más información</a>
+          <a class="btn btn-amber" href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener" style="background:var(--amber);color:#3a2a0e;font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none"><span data-i18n="app_open">Abrir cuidaApp</span></a>
+          <a class="btn" href="#contacto" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);font-weight:800;padding:13px 24px;border-radius:999px;text-decoration:none"><span data-i18n="app_more">Más información</span></a>
         </div>
       </div>
       <div style="flex:none">
@@ -531,15 +537,15 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
       <div class="cap">Jean M. Vianney</div>
     </div>
     <div>
-      <span class="eyebrow">Sobre mí</span>
-      <h2>Detrás de cada recomendación hay un profesional</h2>
-      <div class="role">Psicólogo · Gerontología neuropsicológica</div>
-      <p>Soy <b>Jean M. Vianney</b>, psicólogo especializado en capacidades mentales y en el acompañamiento de personas mayores. Mi trabajo une la práctica diaria en centros de mayores con la investigación sobre la cognición en la última etapa de la vida.</p>
-      <p>Creé CuidarConSentido para que las familias y los cuidadores encuentren, en un mismo lugar, productos útiles y conocimiento fiable, sin tecnicismos innecesarios y con respeto por la dignidad de cada persona.</p>
+      <span class="eyebrow" data-i18n="about_eyebrow">Sobre mí</span>
+      <h2 data-i18n="about_h2">Detrás de cada recomendación hay un profesional</h2>
+      <div class="role" data-i18n="about_role">Psicólogo · Gerontología neuropsicológica</div>
+      <p data-i18n="about_p1">Soy <b>Jean M. Vianney</b>, psicólogo especializado en capacidades mentales y en el acompañamiento de personas mayores. Mi trabajo une la práctica diaria en centros de mayores con la investigación sobre la cognición en la última etapa de la vida.</p>
+      <p data-i18n="about_p2">Creé CuidarConSentido para que las familias y los cuidadores encuentren, en un mismo lugar, productos útiles y conocimiento fiable, sin tecnicismos innecesarios y con respeto por la dignidad de cada persona.</p>
       <div class="links">
-        <a class="chip" href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Escríbeme</a>
+        <a class="chip" href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 7l9 6 9-6"/></svg> <span data-i18n="about_chip_email">Escríbeme</span></a>
         <a class="chip" href="https://www.linkedin.com/in/jean-marie-vianney-vianney-46bb99288" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11.02 5 2.5 2.5 0 01-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4 0 4.75 2.65 4.75 6.1V21H20v-5.5c0-1.3-.02-3-1.85-3-1.85 0-2.15 1.45-2.15 2.9V21H9z"/></svg> LinkedIn</a><a class="chip" href="https://www.tiktok.com/@johannemaria24" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.7 3.9 4 4.1v2.7c-1.4.1-2.7-.3-4-1v5.9c0 3.3-2.5 5.6-5.6 5.6A5.4 5.4 0 014 14.9c-.1-3 2.3-5.5 5.6-5.4v2.8c-.5-.1-1-.1-1.5 0a2.7 2.7 0 00.6 5.3c1.6 0 2.6-1.2 2.6-2.8V3z"/></svg> TikTok</a>
-        <a class="chip" href="https://www.malt.es/profile/jeanmvianney" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> Perfil en Malt</a>
+        <a class="chip" href="https://www.malt.es/profile/jeanmvianney" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg> <span data-i18n="about_chip_malt">Perfil en Malt</span></a>
       </div>
     </div>
   </div>
@@ -549,14 +555,14 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
 <section class="contact" id="contacto">
   <div class="wrap">
     <div class="contact-card" data-reveal>
-      <span class="eyebrow" style="justify-content:center">Hablemos</span>
-      <h2>¿Necesitas orientación o una recomendación?</h2>
-      <p>Cuéntame tu situación y te responderé personalmente. Para familias, cuidadores y profesionales que buscan acompañar mejor a una persona mayor.</p>
+      <span class="eyebrow" style="justify-content:center" data-i18n="contact_eyebrow">Hablemos</span>
+      <h2 data-i18n="contact_h2">¿Necesitas orientación o una recomendación?</h2>
+      <p data-i18n="contact_p">Cuéntame tu situación y te responderé personalmente. Para familias, cuidadores y profesionales que buscan acompañar mejor a una persona mayor.</p>
       <div class="contact-cta">
-        <a class="btn btn-primary" href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido">Escribir un correo
+        <a class="btn btn-primary" href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido"><span data-i18n="contact_email_btn">Escribir un correo</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 7l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
         </a>
-        <a class="btn btn-amber" href="https://wa.me/34651839583?text=Hola%20Jean%2C%20te%20escribo%20desde%20CuidarConSentido." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+        <a class="btn btn-amber" href="https://wa.me/34651839583?text=Hola%20Jean%2C%20te%20escribo%20desde%20CuidarConSentido." target="_blank" rel="noopener"><span data-i18n="contact_wa_btn">Escribir por WhatsApp</span></a>
       </div>
     </div>
   </div>
@@ -571,30 +577,30 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
           <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="rgba(255,255,255,.08)"/><path d="M5 22 C11 22 12 14 17 14 C22 14 23 22 29 22" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="17" cy="11" r="3.4" fill="#DD9C44"/></svg>
           <span><b>Cuidar</b><span>Con</span><b>Sentido</b></span>
         </div>
-        <p>Productos y conocimiento para acompañar el envejecimiento cognitivo, con criterio profesional y respeto por la persona.</p>
+        <p data-i18n="foot_p">Productos y conocimiento para acompañar el envejecimiento cognitivo, con criterio profesional y respeto por la persona.</p>
       </div>
       <div class="foot-col">
-        <h4>Secciones</h4>
-        <a href="#productos">Productos</a>
-        <a href="#conocimiento">Conocimiento</a>
-        <a href="#articulos">Artículos</a>
-        <a href="#sobre-mi">Sobre mí</a>
+        <h4 data-i18n="foot_h4_sec">Secciones</h4>
+        <a href="#productos" data-i18n="nav_productos">Productos</a>
+        <a href="#conocimiento" data-i18n="nav_conocimiento">Conocimiento</a>
+        <a href="#articulos" data-i18n="nav_articulos">Artículos</a>
+        <a href="#sobre-mi" data-i18n="nav_sobremi">Sobre mí</a>
       </div>
       <div class="foot-col">
-        <h4>Contacto</h4>
-        <a href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido">Escríbeme</a>
+        <h4 data-i18n="foot_h4_con">Contacto</h4>
+        <a href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido"><span data-i18n="foot_email">Escríbeme</span></a>
         <a href="https://wa.me/34651839583?text=Hola%20Jean%2C%20te%20escribo%20desde%20CuidarConSentido." target="_blank" rel="noopener">WhatsApp</a>
         <a href="https://www.linkedin.com/in/jean-marie-vianney-vianney-46bb99288" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.malt.es/profile/jeanmvianney" target="_blank" rel="noopener">Malt</a>
         <a href="https://www.tiktok.com/@johannemaria24" target="_blank" rel="noopener">TikTok</a>
       </div>
     </div>
-    <div class="disclosure">
+    <div class="disclosure" data-i18n="disclosure">
       <b>Aviso de afiliación.</b> Como Afiliado de Amazon, CuidarConSentido obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables. Algunos enlaces a otras tiendas también pueden generar comisión. Esto no supone ningún coste adicional para ti y no condiciona nuestras recomendaciones. La información de la web es divulgativa y no sustituye el consejo médico o psicológico profesional.
     </div>
     <div class="foot-bottom">
       <span>© <span id="yr"></span> CuidarConSentido · Jean M. Vianney</span>
-      <span>Hecho con sentido en Tarragona</span>
+      <span data-i18n="foot_made">Hecho con sentido en Tarragona</span>
     </div>
   </div>
 </footer>
@@ -614,6 +620,26 @@ footer{background:var(--green-d); color:#BFD2CB; padding:56px 0 30px; font-size:
     var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); }, {threshold:.12});
     document.querySelectorAll("[data-reveal]").forEach(function(el){ io.observe(el); });
   } else { document.querySelectorAll("[data-reveal]").forEach(function(el){ el.classList.add("in"); }); }
+</script>
+
+<script>
+(function(){
+  var I18N = {"fr": {"nav_productos": "Produits", "nav_conocimiento": "Savoir", "nav_video": "Vidéo", "nav_articulos": "Articles", "nav_lecturas": "Lectures", "nav_sobremi": "À propos", "nav_contacto": "Contact", "hero_eyebrow": "Accompagner le vieillissement cognitif", "hero_h1": "Prendre soin avec <em>sens</em>, décider avec discernement.", "hero_lede": "Des produits bien choisis pour les personnes âgées et un savoir rigoureux sur l’esprit qui vieillit. Un même lieu pour qui accompagne, aide ou cherche.", "hero_btn1": "Voir les produits recommandés", "hero_btn2": "Explorer le savoir", "hero_mini": "Sélection honnête · Sans coût pour vous · Fondé sur des preuves", "trust1": "Sélectionné par <b>Jean&nbsp;M.&nbsp;Vianney</b>, psychologue", "trust2": "Gérontologie neuropsychologique", "trust3": "Des recommandations honnêtes, sans pression", "pill_eyebrow": "Ce que vous trouverez ici", "pill_h2": "Trois façons de mieux prendre soin", "pill_p": "CuidarConSentido réunit le pratique et le rigoureux : ce qu’il faut acheter et ce qu’il faut comprendre.", "pill1_h3": "Produits sélectionnés", "pill1_p": "Des articles utiles pour la vie quotidienne, la sécurité et la stimulation, choisis en pensant à la personne âgée et à celui qui l’accompagne.", "pill2_h3": "Savoir rigoureux", "pill2_p": "Une vulgarisation claire sur la neuropsychologie, la psychopédagogie, le déclin cognitif et la diversité mentale, sur une base scientifique.", "pill3_h3": "Accompagnement professionnel", "pill3_p": "Derrière le site, il y a un psychologue spécialisé. Si vous avez besoin de conseils personnels, vous pouvez écrire et exposer votre cas.", "prod_eyebrow": "Produits pour personnes âgées", "prod_h2": "Ce qui aide vraiment à la maison", "prod_p": "Des catégories pensées pour l’autonomie, la sécurité et le bien-être. Chaque sélection renvoie à des produits de boutiques comme Amazon et d’autres partenaires.", "cat1_h3": "Orientation et mémoire", "cat1_p": "Horloges à grand affichage du jour et de la date, calendriers, piluliers hebdomadaires et rappels qui rassurent.", "cat2_h3": "Stimulation cognitive", "cat2_p": "Cahiers d’exercices, jeux de mémoire, puzzles adaptés et matériel pour garder l’esprit actif.", "cat3_h3": "Sécurité et mobilité", "cat3_p": "Poignées d’appui, tapis antidérapants, cannes, déambulateurs et petites aides qui préviennent les chutes.", "cat4_h3": "Vie quotidienne et autonomie", "cat4_p": "Couverts adaptés, ouvre-bocaux, chausse-pieds longs et ustensiles qui redonnent de l’indépendance au quotidien.", "cat5_h3": "Communication et sens", "cat5_p": "Téléphones à grandes touches, amplificateurs de son, loupes éclairantes et lunettes de lecture confortables.", "cat6_h3": "Repos et confort", "cat6_p": "Coussins de positionnement, couvertures douces, protections et petits détails qui améliorent le repos.", "lbl_reloj": "Horloge jour et date", "lbl_vermas_relojes": "Voir plus d’horloges pour seniors", "lbl_juegos": "Jeux de stimulation", "lbl_cuaderno": "Cahier d’exercices", "lbl_vermas_juegos": "Voir plus de jeux et cahiers", "lbl_andador": "Déambulateur", "lbl_vermas_andadores": "Voir plus de déambulateurs et fauteuils roulants", "lbl_abridor": "Ouvre-bocaux", "lbl_telefonos": "Téléphones à grandes touches", "lbl_auriculares": "Casque audio", "lbl_mas_telefonos": "Plus de téléphones adaptés", "lbl_cojin": "Coussin", "lbl_almohadas": "Oreillers", "aff_note": "Certains liens sont des liens d’affiliation : si vous achetez via ces liens, CuidarConSentido peut recevoir une petite commission <b>sans coût supplémentaire pour vous</b>. Nous ne recommandons que ce que nous jugeons utile.", "know_eyebrow": "Centre de savoir", "know_h2": "Comprendre l’esprit qui vieillit", "know_p": "Du contenu de vulgarisation et professionnel sur la cognition, l’apprentissage et la diversité mentale, écrit pour les familles, les aidants et les étudiants.", "topic1_h3": "Neuropsychologie", "topic1_p": "Comment le cerveau et le comportement sont liés : mémoire, attention, langage et fonctions exécutives, et comment on les évalue.", "topic2_h3": "Psychopédagogie", "topic2_p": "L’apprentissage tout au long de la vie et comment continuer à stimuler les capacités, même au grand âge.", "topic3_h3": "Handicap et diversité mentale", "topic3_p": "Un regard fondé sur les droits et l’inclusion : comprendre, accompagner et ne pas réduire la personne à son diagnostic.", "topic4_h3": "Déclin cognitif léger", "topic4_p": "Ce que c’est, les signes à observer et comment le distinguer du vieillissement normal et de la démence.", "topic5_h3": "Stimulation cognitive", "topic5_p": "Ce que disent les preuves sur le maintien d’un esprit actif et comment concevoir des activités qui ont du sens à la maison.", "topic6_h3": "Familles et aidants", "topic6_p": "Prendre soin fatigue aussi. Des ressources pour soutenir l’aidant et prévenir la surcharge émotionnelle.", "read_more": "Lire plus", "vid_eyebrow": "Vidéos", "vid_h2": "Apprendre et accompagner, en vidéo", "vid_p": "J’explique simplement comment stimuler l’esprit des personnes âgées et comment prendre soin de celui qui prend soin.", "vid1_h3": "Stimuler la mémoire, l’attention et le langage", "vid2_h3": "Pour les aidants : quand on ne sait plus quoi faire", "watch_yt": "Voir sur YouTube", "art_eyebrow": "Série · Vieillissement et cognition", "art_h2": "Articles à la une", "art_p": "De courtes lectures qui relient la science au quotidien du soin.", "art1_tag": "Neurodéveloppement et vieillesse · ES/FR", "art1_h3": "Quand l’environnement soigne", "art1_p": "Ce que l’attention chez les enfants autistes nous apprend sur l’accompagnement des personnes âgées en déclin cognitif.", "art2_tag": "Programme MAR · ES/FR", "art2_h3": "Le programme MAR", "art2_p": "Stimuler l’esprit sans oublier la personne : les cinq clés de mon programme d’accompagnement des personnes âgées.", "art3_tag": "Aidants · ES/FR", "art3_h3": "Prendre soin de celui qui prend soin", "art3_p": "Cinq clés pour soutenir l’aidant et prévenir l’épuisement. On ne peut pas donner ce que l’on n’a pas.", "read_article": "Lire l’article", "lec_eyebrow": "Lectures et ressources", "lec_h2": "Pour continuer à apprendre", "lec_p": "Des recensions de livres et des ressources de référence en gérontologie, neuropsychologie et accompagnement des personnes âgées.", "lec1_kicker": "Recension · Livre", "lec1_p": "Un manuel pratique d’Editorial CCS pour la stimulation cognitive et le bien-être des personnes âgées.", "lec1_link": "Lire la recension", "lec2_kicker": "Recherche · FR", "lec2_h3": "Le cadre théorique de ma thèse (ch. 1-3)", "lec2_p": "Synthèse sur vieillesse et dignité, neuropsychologie du vieillissement, environnement résidentiel et le programme MAR.", "lec2_link": "Lire la note", "app_eyebrow": "L’appli · cuidaApp", "app_h2": "Emportez le soin avec vous, chaque jour", "app_p": "cuidaApp est l’application de CuidarConSentido pour accompagner les aidants de personnes en déclin cognitif : conseils quotidiens, activités de stimulation et soutien, sur votre mobile et en plusieurs langues.", "app_open": "Ouvrir cuidaApp", "app_more": "En savoir plus", "about_eyebrow": "À propos de moi", "about_h2": "Derrière chaque recommandation, un professionnel", "about_role": "Psychologue · Gérontologie neuropsychologique", "about_p1": "Je suis <b>Jean M. Vianney</b>, psychologue spécialisé dans les capacités mentales et l’accompagnement des personnes âgées. Mon travail réunit la pratique quotidienne en établissements pour personnes âgées et la recherche sur la cognition au dernier âge de la vie.", "about_p2": "J’ai créé CuidarConSentido pour que les familles et les aidants trouvent, au même endroit, des produits utiles et un savoir fiable, sans jargon inutile et dans le respect de la dignité de chacun.", "about_chip_email": "Écrivez-moi", "about_chip_malt": "Profil sur Malt", "contact_eyebrow": "Parlons-en", "contact_h2": "Besoin de conseils ou d’une recommandation ?", "contact_p": "Parlez-moi de votre situation et je vous répondrai personnellement. Pour les familles, les aidants et les professionnels qui veulent mieux accompagner une personne âgée.", "contact_email_btn": "Envoyer un e-mail", "contact_wa_btn": "Écrire sur WhatsApp", "foot_p": "Produits et savoir pour accompagner le vieillissement cognitif, avec un regard professionnel et le respect de la personne.", "foot_h4_sec": "Sections", "foot_h4_con": "Contact", "foot_email": "Écrivez-moi", "disclosure": "<b>Avis d’affiliation.</b> En tant que Partenaire Amazon, CuidarConSentido perçoit une rémunération sur les achats remplissant les conditions requises. Certains liens vers d’autres boutiques peuvent aussi générer une commission. Cela n’entraîne aucun coût supplémentaire pour vous et ne conditionne pas nos recommandations. Les informations du site sont à caractère informatif et ne remplacent pas un avis médical ou psychologique professionnel.", "foot_made": "Fait avec sens à Tarragone"}, "en": {"nav_productos": "Products", "nav_conocimiento": "Knowledge", "nav_video": "Video", "nav_articulos": "Articles", "nav_lecturas": "Reading", "nav_sobremi": "About", "nav_contacto": "Contact", "hero_eyebrow": "Supporting cognitive ageing", "hero_h1": "Care with <em>meaning</em>, choose with judgement.", "hero_lede": "Well-chosen products for older people and rigorous knowledge about the ageing mind. One place for those who care, support or research.", "hero_btn1": "See recommended products", "hero_btn2": "Explore the knowledge", "hero_mini": "Honest selection · No cost to you · Evidence-based", "trust1": "Curated by <b>Jean&nbsp;M.&nbsp;Vianney</b>, psychologist", "trust2": "Neuropsychological gerontology", "trust3": "Honest recommendations, no pressure", "pill_eyebrow": "What you’ll find here", "pill_h2": "Three ways to care better", "pill_p": "CuidarConSentido brings together the practical and the rigorous: what you need to buy and what you need to understand.", "pill1_h3": "Selected products", "pill1_p": "Useful items for daily life, safety and stimulation, chosen with the older person and their carer in mind.", "pill2_h3": "Rigorous knowledge", "pill2_p": "Clear, science-based content on neuropsychology, educational psychology, cognitive decline and mental diversity.", "pill3_h3": "Professional support", "pill3_p": "Behind the site is a specialised psychologist. If you need personal guidance, you can write and share your situation.", "prod_eyebrow": "Products for older people", "prod_h2": "What really helps at home", "prod_p": "Categories designed for autonomy, safety and wellbeing. Each selection links to products from stores like Amazon and other partners.", "cat1_h3": "Orientation & memory", "cat1_p": "Clocks with large day and date display, calendars, weekly pill organisers and reminders that bring peace of mind.", "cat2_h3": "Cognitive stimulation", "cat2_p": "Activity workbooks, memory games, adapted puzzles and material to keep the mind active.", "cat3_h3": "Safety & mobility", "cat3_p": "Grab bars, non-slip mats, canes, walkers and small aids that prevent falls.", "cat4_h3": "Daily life & autonomy", "cat4_p": "Adapted cutlery, jar openers, long shoehorns and utensils that restore day-to-day independence.", "cat5_h3": "Communication & senses", "cat5_p": "Big-button phones, sound amplifiers, lighted magnifiers and comfortable reading glasses.", "cat6_h3": "Rest & comfort", "cat6_p": "Positioning cushions, soft blankets, protectors and small details that improve rest.", "lbl_reloj": "Day & date clock", "lbl_vermas_relojes": "See more clocks for seniors", "lbl_juegos": "Stimulation games", "lbl_cuaderno": "Activity workbook", "lbl_vermas_juegos": "See more games & workbooks", "lbl_andador": "Walker", "lbl_vermas_andadores": "See more walkers & wheelchairs", "lbl_abridor": "Jar opener", "lbl_telefonos": "Big-button phones", "lbl_auriculares": "Headphones", "lbl_mas_telefonos": "More adapted phones", "lbl_cojin": "Cushion", "lbl_almohadas": "Pillows", "aff_note": "Some links are affiliate links: if you buy through them, CuidarConSentido may earn a small commission <b>at no extra cost to you</b>. We only recommend what we consider useful.", "know_eyebrow": "Knowledge hub", "know_h2": "Understanding the ageing mind", "know_p": "Accessible and professional content on cognition, learning and mental diversity, written for families, carers and students.", "topic1_h3": "Neuropsychology", "topic1_p": "How brain and behaviour relate: memory, attention, language and executive functions, and how they’re assessed.", "topic2_h3": "Educational psychology", "topic2_p": "Lifelong learning and how to keep stimulating abilities, even in later life.", "topic3_h3": "Disability & mental diversity", "topic3_p": "A rights- and inclusion-based view: understand, support and never reduce a person to their diagnosis.", "topic4_h3": "Mild cognitive impairment", "topic4_p": "What it is, which signs to watch for and how to tell it apart from normal ageing and dementia.", "topic5_h3": "Cognitive stimulation", "topic5_p": "What the evidence says about keeping the mind active and how to design meaningful activities at home.", "topic6_h3": "Families & carers", "topic6_p": "Caring is tiring too. Resources to support the carer and prevent emotional overload.", "read_more": "Read more", "vid_eyebrow": "Videos", "vid_h2": "Learn and support, in video", "vid_p": "I explain simply how to stimulate older people’s minds and how to care for the carer.", "vid1_h3": "Stimulating memory, attention and language", "vid2_h3": "For carers: when you don’t know what to do", "watch_yt": "Watch on YouTube", "art_eyebrow": "Series · Ageing & cognition", "art_h2": "Featured articles", "art_p": "Short reads connecting science to everyday care.", "art1_tag": "Neurodevelopment & ageing · ES/FR", "art1_h3": "When the environment cares", "art1_p": "What attention in autistic children teaches us about supporting older people with cognitive decline.", "art2_tag": "MAR programme · ES/FR", "art2_h3": "The MAR programme", "art2_p": "Stimulating the mind without forgetting the person: the five keys of my support programme for older people.", "art3_tag": "Carers · ES/FR", "art3_h3": "Caring for the carer", "art3_p": "Five keys to support the carer and prevent burnout. You can’t give what you don’t have.", "read_article": "Read the article", "lec_eyebrow": "Reading & resources", "lec_h2": "To keep learning", "lec_p": "Book reviews and reference materials on gerontology, neuropsychology and care of older people.", "lec1_kicker": "Review · Book", "lec1_p": "A practical handbook from Editorial CCS for cognitive stimulation and the wellbeing of older people.", "lec1_link": "Read the review", "lec2_kicker": "Research · FR", "lec2_h3": "The theoretical framework of my thesis (Ch. 1-3)", "lec2_p": "A synthesis on ageing and dignity, neuropsychology of ageing, residential environment and the MAR programme.", "lec2_link": "Read the note", "app_eyebrow": "The app · cuidaApp", "app_h2": "Take care with you, every day", "app_p": "cuidaApp is the CuidarConSentido app to support carers of people with cognitive decline: daily tips, stimulation activities and support, on your phone and in several languages.", "app_open": "Open cuidaApp", "app_more": "Learn more", "about_eyebrow": "About me", "about_h2": "Behind every recommendation, a professional", "about_role": "Psychologist · Neuropsychological gerontology", "about_p1": "I’m <b>Jean M. Vianney</b>, a psychologist specialising in mental abilities and the care of older people. My work brings together daily practice in care homes and research on cognition in the final stage of life.", "about_p2": "I created CuidarConSentido so that families and carers can find, in one place, useful products and reliable knowledge, without unnecessary jargon and with respect for each person’s dignity.", "about_chip_email": "Email me", "about_chip_malt": "Malt profile", "contact_eyebrow": "Let’s talk", "contact_h2": "Need guidance or a recommendation?", "contact_p": "Tell me about your situation and I’ll reply personally. For families, carers and professionals who want to better support an older person.", "contact_email_btn": "Send an email", "contact_wa_btn": "Message on WhatsApp", "foot_p": "Products and knowledge to support cognitive ageing, with professional judgement and respect for the person.", "foot_h4_sec": "Sections", "foot_h4_con": "Contact", "foot_email": "Email me", "disclosure": "<b>Affiliate disclosure.</b> As an Amazon Associate, CuidarConSentido earns from qualifying purchases. Some links to other stores may also earn a commission. This is at no extra cost to you and does not influence our recommendations. The information on this site is for general guidance and does not replace professional medical or psychological advice.", "foot_made": "Made with meaning in Tarragona"}};
+  var nodes = document.querySelectorAll('[data-i18n]');
+  nodes.forEach(function(n){ n.setAttribute('data-es', n.innerHTML); });
+  window.setLang = function(l){
+    document.documentElement.lang = l;
+    try{ localStorage.setItem('ccs_lang', l); }catch(e){}
+    nodes.forEach(function(n){
+      var k = n.getAttribute('data-i18n');
+      if(l==='es'){ n.innerHTML = n.getAttribute('data-es'); }
+      else { var t = I18N[l] && I18N[l][k]; n.innerHTML = (t!=null ? t : n.getAttribute('data-es')); }
+    });
+    ['es','fr','en'].forEach(function(x){ var b=document.getElementById('lang-'+x); if(b){ b.setAttribute('aria-pressed', x===l ? 'true':'false'); } });
+  };
+  var saved; try{ saved = localStorage.getItem('ccs_lang'); }catch(e){}
+  if(saved && saved!=='es'){ setLang(saved); }
+})();
 </script>
 </body>
 </html>
