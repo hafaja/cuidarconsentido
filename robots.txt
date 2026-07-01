@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cuidarconsentidoweb.netlify.app/sitemap.xml
