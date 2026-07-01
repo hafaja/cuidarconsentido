@@ -90,9 +90,12 @@ ul.clean li b{color:var(--ink)}
 footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; color:var(--ink-faint); font-size:13px}
 footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
 
-.lang-fr{display:none}
+.lang-fr,.lang-en{display:none}
 body[data-lang="fr"] .lang-es{display:none}
 body[data-lang="fr"] .lang-fr{display:block}
+body[data-lang="en"] .lang-es{display:none}
+body[data-lang="en"] .lang-fr{display:none}
+body[data-lang="en"] .lang-en{display:block}
 
 @media (max-width:600px){
   body{font-size:17px}
@@ -115,8 +118,9 @@ body[data-lang="fr"] .lang-fr{display:block}
       <div class="toggle" role="group" aria-label="Idioma / Langue">
         <button id="es" aria-pressed="true" onclick="setLang('es')">ES</button>
         <button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button>
+        <button id="en" aria-pressed="false" onclick="setLang('en')">EN</button>
       </div>
-      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span></a>
+      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
     </div>
   </div>
 </header>
@@ -230,13 +234,66 @@ body[data-lang="fr"] .lang-fr{display:block}
       </div>
     </div>
 
+    <!-- ====== ENGLISH ====== -->
+    <div class="lang-en">
+      <span class="eyebrow">Knowledge · Neurodevelopment &amp; ageing</span>
+      <h1>When the environment cares</h1>
+      <p class="standfirst">What attention in autistic children teaches us about supporting older people with cognitive decline.</p>
+      <div class="byline">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <span>By <b>Jean M. Vianney</b>, psychologist · Based on research carried out in Yaoundé (Cameroon)</span>
+      </div>
+
+      <div class="body">
+        <p class="lead-cap">Attention is the foundation on which almost all learning is built: to remember, understand or relate to others, you first have to be able to attend. In children with Autism Spectrum Disorder (ASD), this capacity is often deeply altered. It isn’t that they “don’t want” to pay attention: their brain filters stimuli differently, and a classroom full of noise, movement and unexpected changes can become an exhausting environment.</p>
+        <p>Where specialised resources are scarce —as in many parts of sub-Saharan Africa— the challenge multiplies: often the child “is” physically in class but never truly takes part. That was the starting question of this research, carried out at the Einstein Psycho-pedagogical Institute in Yaoundé: <strong>can this attention deficit be reduced by changing the environment, instead of waiting for the child to change?</strong></p>
+
+        <h2>Two simple, powerful ideas</h2>
+        <p>The intervention combined two well-documented approaches:</p>
+        <ul class="clean">
+          <li><b>Structure space and time</b> (TEACCH model): organise the classroom into clear zones —work, rest, play— and make time visible with pictogram schedules. The child knows what comes next, where and for how long. Predictability lowers anxiety and frees up attention.</li>
+          <li><b>Reinforce the positive</b> (ABA approach): instead of punishing mistakes, immediately reward each success with something that genuinely motivates that child —a word of encouragement, a favourite object, a token system. The effort of concentrating starts to make sense.</li>
+        </ul>
+        <p>The underlying idea: the environment can act as a <strong>“cognitive prosthesis”</strong>, doing from the outside what the child’s brain cannot yet do from within.</p>
+
+        <h2>What was done</h2>
+        <p>Over a full school year, the children were first observed in the ordinary classroom —to measure the baseline— and then with the restructured environment and reinforcements. Attention was tracked in four forms: <strong>selective</strong> (focusing while ignoring distractions), <strong>sustained</strong> (staying on task), <strong>alternating</strong> (switching from one task to another) and <strong>joint</strong> (sharing attention with another person). This was complemented by interviews with teachers and families.</p>
+
+        <h2>What changed</h2>
+        <div class="stats">
+          <div class="stat"><div class="lab">Distractions / 15 min</div><div class="row"><span class="from">8</span><span class="arr">→</span><span class="to">under 2</span></div></div>
+          <div class="stat"><div class="lab">Sustained attention</div><div class="row"><span class="from">3 min 40 s</span><span class="arr">→</span><span class="to">+12 min</span></div></div>
+          <div class="stat"><div class="lab">Joint attention</div><div class="row"><span class="from">&lt;10 %</span><span class="arr">→</span><span class="to">55 %</span></div></div>
+          <div class="stat"><div class="lab">Switching task</div><div class="row"><span class="from">+5 min</span><span class="arr">→</span><span class="to">&lt;45 s</span></div></div>
+        </div>
+        <p>And crucially, these gains did not stay in the classroom: several families used the same visual routines and reinforcements at home —meals, hygiene— and noticed less resistance and more autonomy.</p>
+
+        <p class="pull">“An attention deficit is not a fixed destiny: it is a variable the environment can change.”</p>
+
+        <h2>From the classroom to the care home</h2>
+        <p>Here is the bridge between this research and the care of older people. When attention abilities weaken —whether through neurodevelopment, as in autism, or through ageing, as in <strong>Mild Cognitive Impairment</strong>— the principle that helps is the same: an orderly, predictable environment that values every effort supports the mind and protects autonomy.</p>
+        <p>In a care home, just as in a classroom, the lack of meaningful stimulation pushes towards apathy and isolation. By contrast, <strong>person-centred</strong> care (in the tradition of Tom Kitwood), with clear routines and recognition of effort, keeps attention and connection alive. Caring for the environment is often the most powerful way to care for the person.</p>
+
+        <h2>One idea, from childhood to old age</h2>
+        <p>Born in a classroom of an institute in Yaoundé, this research carries an idea that travels from child to elder: before asking someone to adapt to a difficult environment, we can make the environment an ally. It is the same principle that guides my doctoral work on cognitive ageing today, and the heart of CuidarConSentido.</p>
+
+        <div class="authorbox">
+          <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+          <div>
+            <h3>About the author</h3>
+            <p>Jean M. Vianney is a psychologist specialising in mental abilities, disability and gerontology. This article draws on his master’s research carried out at the Einstein Psycho-pedagogical Institute (Yaoundé, Cameroon). The full study is being prepared for scientific publication.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- CTA (bilingüe) -->
     <div class="cta-box">
-      <h3><span class="lang-es">¿Acompañas a un familiar mayor?</span><span class="lang-fr">Vous accompagnez un proche âgé ?</span></h3>
-      <p><span class="lang-es">Cuéntame tu situación y te responderé personalmente. Productos útiles y conocimiento fiable, en un mismo lugar.</span><span class="lang-fr">Parlez-moi de votre situation et je vous répondrai personnellement. Des produits utiles et un savoir fiable, au même endroit.</span></p>
+      <h3><span class="lang-es">¿Acompañas a un familiar mayor?</span><span class="lang-fr">Vous accompagnez un proche âgé ?</span><span class="lang-en">Caring for an older relative?</span></h3>
+      <p><span class="lang-es">Cuéntame tu situación y te responderé personalmente. Productos útiles y conocimiento fiable, en un mismo lugar.</span><span class="lang-fr">Parlez-moi de votre situation et je vous répondrai personnellement. Des produits utiles et un savoir fiable, au même endroit.</span><span class="lang-en">Tell me about your situation and I’ll reply personally. Useful products and reliable knowledge, in one place.</span></p>
       <div class="cta-row">
-        <a class="btn btn-amber" href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido"><span class="lang-es">Escríbeme</span><span class="lang-fr">Écrivez-moi</span></a>
-        <a class="btn btn-ghost" href="index.html"><span class="lang-es">Volver al inicio</span><span class="lang-fr">Retour à l’accueil</span></a>
+        <a class="btn btn-amber" href="mailto:cuidarconsentido@gmail.com?subject=Consulta%20desde%20CuidarConSentido"><span class="lang-es">Escríbeme</span><span class="lang-fr">Écrivez-moi</span><span class="lang-en">Email me</span></a>
+        <a class="btn btn-ghost" href="index.html"><span class="lang-es">Volver al inicio</span><span class="lang-fr">Retour à l’accueil</span><span class="lang-en">Back to home</span></a>
       </div>
     </div>
 
@@ -245,7 +302,7 @@ body[data-lang="fr"] .lang-fr{display:block}
 
 <footer>
   <div class="wrap">
-    <div class="disc"><span class="lang-es">Este contenido es divulgativo y no sustituye el consejo médico o psicológico profesional. Como Afiliado de Amazon, CuidarConSentido obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables.</span><span class="lang-fr">Ce contenu est informatif et ne remplace pas un avis médical ou psychologique professionnel. En tant que Partenaire Amazon, CuidarConSentido réalise un bénéfice sur les achats remplissant les conditions requises.</span></div>
+    <div class="disc"><span class="lang-es">Este contenido es divulgativo y no sustituye el consejo médico o psicológico profesional. Como Afiliado de Amazon, CuidarConSentido obtiene ingresos por las compras adscritas que cumplen los requisitos aplicables.</span><span class="lang-fr">Ce contenu est informatif et ne remplace pas un avis médical ou psychologique professionnel. En tant que Partenaire Amazon, CuidarConSentido réalise un bénéfice sur les achats remplissant les conditions requises.</span><span class="lang-en">This content is informational and does not replace professional medical or psychological advice. As an Amazon Associate, CuidarConSentido earns from qualifying purchases.</span></div>
     © <span id="yr"></span> CuidarConSentido · Jean M. Vianney
   </div>
 </footer>
@@ -257,6 +314,7 @@ body[data-lang="fr"] .lang-fr{display:block}
     document.documentElement.lang = l;
     document.getElementById("es").setAttribute("aria-pressed", l==="es"?"true":"false");
     document.getElementById("fr").setAttribute("aria-pressed", l==="fr"?"true":"false");
+    document.getElementById("en").setAttribute("aria-pressed", l==="en"?"true":"false");
     try{ window.scrollTo({top:0, behavior:"auto"}); }catch(e){}
   }
 </script>

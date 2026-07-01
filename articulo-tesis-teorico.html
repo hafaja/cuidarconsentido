@@ -66,9 +66,19 @@ footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; c
 footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
 @media (max-width:600px){ body{font-size:17px} .authorbox{flex-direction:column; gap:12px} }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+.lang-fr,.lang-en{display:none}
+body[data-lang="fr"] .lang-es{display:none}
+body[data-lang="fr"] .lang-fr{display:block}
+body[data-lang="fr"] .lang-en{display:none}
+body[data-lang="en"] .lang-es{display:none}
+body[data-lang="en"] .lang-fr{display:none}
+body[data-lang="en"] .lang-en{display:block}
+.toggle{display:inline-flex;border:1.5px solid var(--line2);border-radius:999px;overflow:hidden;background:var(--paper)}
+.toggle button{font-family:inherit;font-weight:800;font-size:12px;padding:6px 11px;background:none;border:none;cursor:pointer;color:var(--ink-soft)}
+.toggle button[aria-pressed="true"]{background:var(--green);color:#fff}
 </style>
 </head>
-<body>
+<body data-lang="es">
 
 <header class="bar">
   <div class="bar-in">
@@ -76,12 +86,49 @@ footer .disc{background:var(--paper); border:1px solid var(--line); border-radiu
       <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#EAF1ED" stroke="#DCE8E1"/><path d="M5 22 C11 22 12 14 17 14 C22 14 23 22 29 22" stroke="#20564A" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="17" cy="11" r="3.4" fill="#DD9C44"/></svg>
       <span><b>Cuidar</b><span>Con</span><b>Sentido</b></span>
     </a>
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Accueil</a>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <div class="toggle" role="group" aria-label="Idioma"><button id="es" aria-pressed="true" onclick="setLang('es')">ES</button><button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button><button id="en" aria-pressed="false" onclick="setLang('en')">EN</button></div>
+      <a class="back" href="index.html" style="margin-left:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> <span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
+    </div>
   </div>
 </header>
 
 <article>
   <div class="wrap">
+    <div class="lang-es">
+    <span class="eyebrow">Investigación doctoral · Nota de lectura</span>
+    <h1>Estimular la cognición en el crepúsculo de la vida: el marco teórico</h1>
+    <p class="standfirst">Síntesis de la parte teórica (capítulos 1 a 3) de mi tesis: de la persona al cerebro, luego al entorno residencial — y hasta el programa MAR.</p>
+    <div class="byline"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span>Por <b>J. M. V. Hafashimana</b> · Tesis doctoral, Universidad de Yaundé I · Dir.: Prof. Mayi Marc Bruno</span></div>
+    <div class="body">
+      <p class="lead-cap">Los tres primeros capítulos de mi tesis constituyen su marco teórico. Juntos responden a una misma pregunta fundadora: ¿cómo influye el entorno de vida en el funcionamiento cognitivo de las personas mayores, y cómo actuar sobre ese entorno para sostenerlo? El recorrido va de la persona al cerebro, luego al entorno residencial, y converge en el programa de intervención MAR.</p>
+      <div class="ch">Capítulo 1</div>
+      <h2>Vejez, discapacidad y dignidad</h2>
+      <p>El primer capítulo asienta el aparato conceptual. Define el envejecimiento como un proceso multidimensional y profundamente heterogéneo: dos personas de la misma edad pueden presentar estados muy distintos, lo que impide cualquier lectura puramente cronológica. Distingue la deficiencia, la incapacidad y la situación de discapacidad, y adopta una perspectiva biopsicosocial que se niega a reducir la vejez al mero declive biológico. Su concepto central es la <strong>reserva cognitiva</strong>: un recurso dinámico, construido a lo largo de la vida, que explica la variabilidad frente al envejecimiento cerebral y funda la esperanza de una acción eficaz. Por último, establece el fundamento ético del enfoque —la dignidad de la persona y el cuidado centrado en la persona— ligado a los marcos de la OMS (envejecer con salud, capacidad intrínseca, prevención).</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>Para recordar.</b> El envejecimiento es plural y en parte modificable; la reserva cognitiva y la dignidad fundan la acción, que resulta siempre de la interacción entre la persona y su entorno.</span></div>
+      <div class="ch">Capítulo 2</div>
+      <h2>Neuropsicología del envejecimiento y deterioro cognitivo</h2>
+      <p>El segundo capítulo desciende al nivel del cerebro y de la cognición. Describe los cambios cerebrales de la edad avanzada —estructurales, funcionales y neuroquímicos— sin confundirlos con la patología, y recuerda que la plasticidad y la neurogénesis persisten, aunque limitadas. Los dominios cognitivos se ven afectados de forma desigual: la velocidad de procesamiento, la atención dividida y algunas funciones ejecutivas declinan, mientras que el lenguaje, el vocabulario y la memoria semántica se conservan en gran medida. La frontera entre envejecimiento normal, <strong>deterioro cognitivo leve</strong> y demencia se presenta como un continuo gradual: el deterioro cognitivo leve ocupa una posición bisagra y constituye una ventana de intervención privilegiada. Por último, discute el aporte y los límites de los biomarcadores, e insiste en una evaluación neuropsicológica rigurosa, apoyada en normas adaptadas y realizada con vigilancia intercultural.</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>Para recordar.</b> El cerebro envejecido conserva recursos reales; el deterioro cognitivo leve es una ventana de acción temprana; la medición debe ser rigurosa y culturalmente prudente.</span></div>
+      <div class="ch">Capítulo 3</div>
+      <h2>Institucionalización y entorno residencial</h2>
+      <p>El tercer capítulo une a la persona, su cerebro y su marco de vida. Analiza la institucionalización como un acontecimiento mayor de efectos ambivalentes, y saca a la luz los mecanismos por los que un entorno mal pensado produce dependencia: sobreprotección y exceso de discapacidad, guion de dependencia, indefensión aprendida, psicología social maligna. Apoyándose en el modelo ecológico de la competencia, establece que el entorno —físico, sensorial, social y organizativo— es un <strong>determinante activo</strong> del funcionamiento cognitivo, tanto más decisivo cuanto más frágil es la persona. Presenta después los modelos de entornos capacitantes —cuidado centrado en la persona, atención centrada en la persona a la española, unidades de pequeño tamaño, restauración del control y la elección— así como el papel de las <strong>historias de vida</strong> y de la reminiscencia en la preservación de la identidad. Una mirada intercultural confronta, por último, el modelo residencial occidental con las solidaridades comunitarias africanas.</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>Para recordar.</b> El entorno residencial puede agravar o sostener el funcionamiento; un entorno capacitante y las historias de vida preservan a la vez la cognición y la dignidad.</span></div>
+      <h2>El hilo conductor</h2>
+      <p>Un mismo principio unifica el conjunto: el funcionamiento de la persona mayor resulta de la interacción entre sus recursos internos y su entorno, y ese entorno constituye una palanca de acción decisiva —tanto más cuanto que la persona es vulnerable—. De ese principio se deriva una cadena coherente: la reserva cognitiva es lo que se busca reforzar; la plasticidad cerebral es lo que hace posible la acción; la dignidad y el cuidado centrado en la persona son su brújula ética; y la reciprocidad euroafricana dibuja su horizonte —Occidente aportando su método, África su cultura de la solidaridad intergeneracional.</p>
+      <p class="pull">«El entorno no es el decorado del envejecimiento: es uno de sus actores.»</p>
+      <h2>Culminación: el programa MAR</h2>
+      <p>Esta convergencia funda directamente el programa <strong>MAR (Modulación Ambiental y Reserva cognitiva)</strong>, que traduce el marco teórico en intervención concreta: actuar sobre el entorno residencial movilizando a la vez los recursos preservados de la persona. Cada una de sus modalidades —reducción de la carga atencional, neutralización de la sobreprotección, historias de vida, participación y apoyo a los cuidadores mediante la aplicación cuidaApp— corresponde a un concepto validado en los capítulos anteriores. La parte teórica conduce así lógicamente a la problemática, las hipótesis y el dispositivo de intervención que se desarrollan en el resto de la tesis.</p>
+      <div class="authorbox"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><h3>Acerca de</h3><p>Jean Marie Vianney Hafashimana es psicólogo especializado en gerontología y neuropsicología. Esta nota de lectura sintetiza la parte teórica de su tesis doctoral en curso, «Estimulación cognitiva en el crepúsculo de la vida» (Universidad de Yaundé I).</p></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>El programa MAR, en la práctica</h3>
+      <p>Descubre cómo este marco teórico se traduce en un acompañamiento concreto de las personas mayores.</p>
+      <div class="cta-row"><a class="btn btn-amber" href="articulo-mar.html">Leer el artículo sobre el MAR</a><a class="btn btn-ghost" href="index.html">Volver al inicio</a></div>
+    </div>
+    </div><!-- /lang-es -->
+
+    <div class="lang-fr">
     <span class="eyebrow">Recherche doctorale · Note de lecture</span>
     <h1>Stimuler la cognition au crépuscule de la vie : le cadre théorique</h1>
     <p class="standfirst">Synthèse de la partie théorique (chapitres 1 à 3) de ma thèse : de la personne au cerveau, puis à l’environnement résidentiel — et jusqu’au programme MAR.</p>
@@ -133,15 +180,57 @@ footer .disc{background:var(--paper); border:1px solid var(--line); border-radiu
         <a class="btn btn-ghost" href="index.html">Retour à l’accueil</a>
       </div>
     </div>
+    </div><!-- /lang-fr -->
+
+    <div class="lang-en">
+    <span class="eyebrow">Doctoral research · Reading note</span>
+    <h1>Stimulating cognition at life’s twilight: the theoretical framework</h1>
+    <p class="standfirst">A synthesis of the theoretical part (chapters 1 to 3) of my thesis: from the person to the brain, then to the residential environment — and on to the MAR programme.</p>
+    <div class="byline"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span>By <b>J. M. V. Hafashimana</b> · Doctoral thesis, University of Yaoundé I · Supervisor: Prof. Mayi Marc Bruno</span></div>
+    <div class="body">
+      <p class="lead-cap">The first three chapters of my thesis form its theoretical framework. Together they answer one founding question: how does the living environment influence the cognitive functioning of older people, and how can we act on that environment to support it? The path goes from the person to the brain, then to the residential environment, and converges on the MAR intervention programme.</p>
+      <div class="ch">Chapter 1</div>
+      <h2>Ageing, disability and dignity</h2>
+      <p>The first chapter lays down the conceptual apparatus. It defines ageing as a multidimensional and deeply heterogeneous process: two people of the same age may show very different states, which rules out any purely chronological reading. It distinguishes impairment, disability and the disabling situation, and adopts a bio-psycho-social perspective that refuses to reduce old age to biological decline alone. Its central concept is <strong>cognitive reserve</strong>: a dynamic resource, built across a lifetime, that explains variability in the face of brain ageing and grounds the hope of effective action. Finally, it establishes the ethical foundation of the approach —the dignity of the person and person-centred care— linked to the WHO frameworks (healthy ageing, intrinsic capacity, prevention).</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>Key point.</b> Ageing is plural and partly modifiable; cognitive reserve and dignity ground action, which always results from the interaction between the person and their environment.</span></div>
+      <div class="ch">Chapter 2</div>
+      <h2>Neuropsychology of ageing and cognitive decline</h2>
+      <p>The second chapter moves down to the level of the brain and cognition. It describes the brain changes of old age —structural, functional and neurochemical— without confusing them with pathology, and recalls that plasticity and neurogenesis persist, though bounded. Cognitive domains are unevenly affected: processing speed, divided attention and some executive functions decline, while language, vocabulary and semantic memory remain largely preserved. The boundary between normal ageing, <strong>mild cognitive impairment</strong> and dementia is presented as a gradual continuum: mild cognitive impairment holds a pivotal position and forms a privileged window for intervention. Finally, it discusses the contribution and limits of biomarkers, and insists on rigorous neuropsychological assessment, based on adapted norms and carried out with intercultural care.</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>Key point.</b> The ageing brain keeps real resources; mild cognitive impairment is an early window for action; measurement must be rigorous and culturally cautious.</span></div>
+      <div class="ch">Chapter 3</div>
+      <h2>Institutionalisation and the residential environment</h2>
+      <p>The third chapter links the person, their brain and their living setting. It analyses institutionalisation as a major event with ambivalent effects, and reveals the mechanisms by which a poorly designed environment produces dependence: overprotection and excess disability, dependency script, learned helplessness, malignant social psychology. Drawing on the ecological model of competence, it establishes that the environment —physical, sensory, social and organisational— is an <strong>active determinant</strong> of cognitive functioning, all the more decisive the more fragile the person is. It then presents models of enabling environments —person-centred care, the Spanish atención centrada en la persona, small-scale units, restoring control and choice— as well as the role of <strong>life stories</strong> and reminiscence in preserving identity. Finally, an intercultural perspective contrasts the Western residential model with African community solidarities.</p>
+      <div class="keep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span><b>Key point.</b> The residential environment can worsen or support functioning; an enabling setting and life stories preserve both cognition and dignity.</span></div>
+      <h2>The common thread</h2>
+      <p>One principle unifies the whole: an older person’s functioning results from the interaction between their internal resources and their environment, and that environment is a decisive lever for action —all the more so as the person is vulnerable. From this principle follows a coherent chain: cognitive reserve is what we seek to strengthen; brain plasticity is what makes action possible; dignity and person-centred care are its ethical compass; and Euro-African reciprocity draws its horizon —the West bringing its method, Africa its culture of intergenerational solidarity.</p>
+      <p class="pull">“The environment is not the backdrop of ageing: it is one of its actors.”</p>
+      <h2>Culmination: the MAR programme</h2>
+      <p>This convergence directly grounds the <strong>MAR programme (Ambient Modulation and Cognitive Reserve)</strong>, which turns the theoretical framework into concrete intervention: acting on the residential environment while actively mobilising the person’s preserved resources. Each of its components —reducing attentional load, neutralising overprotection, life stories, participation, and supporting carers through the cuidaApp application— corresponds to a concept validated in the previous chapters. The theoretical part thus leads logically to the research question, the hypotheses and the intervention design developed in the rest of the thesis.</p>
+      <div class="authorbox"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><h3>About</h3><p>Jean Marie Vianney Hafashimana is a psychologist specialising in gerontology and neuropsychology. This reading note synthesises the theoretical part of his ongoing doctoral thesis, “Cognitive stimulation at life’s twilight” (University of Yaoundé I).</p></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>The MAR programme, in practice</h3>
+      <p>Discover how this theoretical framework translates into concrete support for older people.</p>
+      <div class="cta-row"><a class="btn btn-amber" href="articulo-mar.html">Read the MAR article</a><a class="btn btn-ghost" href="index.html">Back to home</a></div>
+    </div>
+    </div><!-- /lang-en -->
   </div>
 </article>
 
 <footer>
   <div class="wrap">
-    <div class="disc">Note de lecture à caractère divulgatif, synthétisant le cadre théorique d’une thèse de doctorat en cours.</div>
+    <div class="disc"><span class="lang-es">Nota de lectura divulgativa, que sintetiza el marco teórico de una tesis doctoral en curso.</span><span class="lang-fr">Note de lecture à caractère divulgatif, synthétisant le cadre théorique d’une thèse de doctorat en cours.</span><span class="lang-en">A reading note for general audiences, synthesising the theoretical framework of an ongoing doctoral thesis.</span></div>
     © <span id="yr"></span> CuidarConSentido · J. M. V. Hafashimana
   </div>
 </footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById("yr").textContent=new Date().getFullYear();
+  function setLang(l){
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.lang = l;
+    ["es","fr","en"].forEach(function(x){ var b=document.getElementById(x); if(b){ b.setAttribute("aria-pressed", x===l?"true":"false"); } });
+    try{ window.scrollTo({top:0, behavior:"auto"}); }catch(e){}
+  }
+</script>
 </body>
 </html>

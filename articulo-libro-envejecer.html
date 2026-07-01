@@ -70,9 +70,18 @@ footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; c
 footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
 @media (max-width:600px){ body{font-size:17px} .authorbox{flex-direction:column; gap:12px} .ficha dl{grid-template-columns:1fr} .ficha dt{margin-top:6px} }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+.lang-fr,.lang-en{display:none}
+body[data-lang="fr"] .lang-es{display:none}
+body[data-lang="fr"] .lang-fr{display:block}
+body[data-lang="en"] .lang-es{display:none}
+body[data-lang="en"] .lang-fr{display:none}
+body[data-lang="en"] .lang-en{display:block}
+.toggle{display:inline-flex;border:1.5px solid var(--line2);border-radius:999px;overflow:hidden;background:var(--paper)}
+.toggle button{font-family:inherit;font-weight:800;font-size:12px;padding:6px 11px;background:none;border:none;cursor:pointer;color:var(--ink-soft)}
+.toggle button[aria-pressed="true"]{background:var(--green);color:#fff}
 </style>
 </head>
-<body>
+<body data-lang="es">
 
 <header class="bar">
   <div class="bar-in">
@@ -80,12 +89,16 @@ footer .disc{background:var(--paper); border:1px solid var(--line); border-radiu
       <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#EAF1ED" stroke="#DCE8E1"/><path d="M5 22 C11 22 12 14 17 14 C22 14 23 22 29 22" stroke="#20564A" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="17" cy="11" r="3.4" fill="#DD9C44"/></svg>
       <span><b>Cuidar</b><span>Con</span><b>Sentido</b></span>
     </a>
-    <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Inicio</a>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <div class="toggle" role="group" aria-label="Idioma"><button id="es" aria-pressed="true" onclick="setLang('es')">ES</button><button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button><button id="en" aria-pressed="false" onclick="setLang('en')">EN</button></div>
+      <a class="back" href="index.html" style="margin-left:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> <span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
+    </div>
   </div>
 </header>
 
 <article>
   <div class="wrap">
+    <div class="lang-es">
     <span class="eyebrow">Lecturas recomendadas · Gerontología</span>
     <h1>«Programa de entrenamiento para envejecer activamente»</h1>
     <p class="standfirst">Un manual práctico y riguroso para ejercitar la mente, fortalecer el bienestar emocional y promover la autonomía en la vejez.</p>
@@ -137,15 +150,82 @@ footer .disc{background:var(--paper); border:1px solid var(--line); border-radiu
         <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
       </div>
     </div>
+    </div><!-- /lang-es -->
+
+    <div class="lang-fr">
+    <span class="eyebrow">Lectures recommandées · Gérontologie</span>
+    <h1>« Programa de entrenamiento para envejecer activamente »</h1>
+    <p class="standfirst">Un manuel pratique et rigoureux pour exercer l’esprit, renforcer le bien-être émotionnel et favoriser l’autonomie au grand âge.</p>
+    <div class="byline"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span>Recension de <b>Jean M. Vianney</b>, psychologue · Lectures recommandées</span></div>
+    <div class="body">
+      <p class="lead-cap">Dans la gérontologie actuelle, la façon de comprendre le vieillissement a pris un tournant décisif : du soin passif du déclin à la <strong>prévention et à la proactivité</strong>. Dans cette lignée, l’un des ouvrages les plus complets et applicables est le <strong>« Programa de entrenamiento para envejecer activamente »</strong>, un manuel collaboratif d’une équipe reconnue de spécialistes (Lojo, Campos, Facal, Mallo, Riaño et Santamaría), publié par Editorial CCS.</p>
+      <p>Il ne s’arrête pas à la théorie : c’est un <strong>guide d’intervention intégral</strong> conçu pour dynamiser les capacités des personnes âgées et retarder le déclin lié à l’âge. Dans une approche pluridisciplinaire, il s’articule autour de trois piliers.</p>
+      <ul class="clean">
+        <li><b>Stimulation cognitive fondée sur des preuves.</b> Des exercices pratiques et structurés pour travailler la mémoire, l’attention, le langage et les fonctions exécutives.</li>
+        <li><b>Dimension psychosociale.</b> Des dynamiques pour renforcer l’estime de soi, lutter contre la solitude non désirée et favoriser l’interaction communautaire.</li>
+        <li><b>Autonomie et qualité de vie.</b> Des stratégies qui rendent la personne actrice pour conserver son indépendance fonctionnelle le plus longtemps possible.</li>
+      </ul>
+      <p>Un grand atout est son <strong>CD-ROM</strong>, avec des outils interactifs et du matériel prêt à l’emploi pour des ateliers de stimulation et d’ergothérapie. Cela en fait une ressource très utile en consultation comme en maison de retraite et en accueil de jour.</p>
+      <p class="pull">« Il traduit les preuves scientifiques en un langage d’intervention accessible, sans provoquer la frustration de l’usager. »</p>
+      <p>Ce que j’apprécie le plus, c’est qu’il respecte les rythmes d’apprentissage et favorise la <strong>neuroplasticité</strong> au grand âge : il stimule sans submerger. Sa structure modulaire permet de l’adapter à différents niveaux de capacité, et son regard rejoint le concept de <strong>vieillissement actif</strong> de l’OMS. C’est, en somme, une lecture de référence pour les professionnels et les institutions engagés dans le bien-être des personnes âgées.</p>
+      <div class="ficha"><h3>Fiche du livre</h3><dl><dt>Titre</dt><dd>Programa de entrenamiento para envejecer activamente (avec CD-ROM)</dd><dt>Auteurs</dt><dd>C. Lojo, M. Campos, D. Facal, S. C. Mallo, Mª N. Riaño, P. Santamaría</dd><dt>Éditeur</dt><dd>Editorial CCS</dd><dt>Approche</dt><dd>Gérontologie pratique, stimulation cognitive et bien-être psychosocial</dd></dl></div>
+      <div class="authorbox"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><h3>Pourquoi je le recommande</h3><p>Jean M. Vianney est psychologue spécialisé en gérontologie et neuropsychologie. Cet ouvrage rejoint sa propre approche —le programme MAR—, où la stimulation cognitive et le respect de l’autonomie vont toujours de pair.</p></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Vous travaillez avec des personnes âgées ?</h3>
+      <p>Découvrez plus de ressources et de savoir sur CuidarConSentido, ou écrivez-moi pour un conseil professionnel.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="https://amzn.to/4vDDBuZ" target="_blank" rel="noopener sponsored">Voir le livre sur Amazon</a>
+        <a class="btn btn-ghost" href="index.html">Retour à l’accueil</a>
+      </div>
+    </div>
+    </div><!-- /lang-fr -->
+
+    <div class="lang-en">
+    <span class="eyebrow">Recommended reading · Gerontology</span>
+    <h1>“Programa de entrenamiento para envejecer activamente”</h1>
+    <p class="standfirst">A practical, rigorous handbook to exercise the mind, strengthen emotional wellbeing and promote autonomy in later life.</p>
+    <div class="byline"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span>Review by <b>Jean M. Vianney</b>, psychologist · Recommended reading</span></div>
+    <div class="body">
+      <p class="lead-cap">In today’s gerontology, the way we understand ageing has taken a decisive turn: from the passive management of decline to <strong>prevention and proactivity</strong>. Along those lines, one of the most complete and applicable works is <strong>“Programa de entrenamiento para envejecer activamente”</strong>, a collaborative handbook by a distinguished team of specialists (Lojo, Campos, Facal, Mallo, Riaño and Santamaría), published by Editorial CCS.</p>
+      <p>It doesn’t stop at theory: it is a <strong>comprehensive intervention guide</strong> designed to energise older people’s abilities and delay age-related decline. With a multidisciplinary approach, it is built on three pillars.</p>
+      <ul class="clean">
+        <li><b>Evidence-based cognitive stimulation.</b> Practical, structured exercises to work on memory, attention, language and executive functions.</li>
+        <li><b>Psychosocial dimension.</b> Activities to strengthen self-esteem, counter unwanted loneliness and encourage community interaction.</li>
+        <li><b>Autonomy and quality of life.</b> Strategies that empower the person to keep their functional independence for as long as possible.</li>
+      </ul>
+      <p>A great added value is its <strong>CD-ROM</strong>, with interactive tools and ready-to-use materials for stimulation workshops and occupational therapy. That makes it very useful both in practice and in care homes and day centres.</p>
+      <p class="pull">“It translates scientific evidence into an accessible language of intervention, without frustrating the user.”</p>
+      <p>What I value most is that it respects learning rhythms and promotes <strong>neuroplasticity</strong> in later life: it challenges cognitively without overwhelming. Its modular structure adapts to different levels of ability, and its outlook connects with the WHO concept of <strong>active ageing</strong>. In short, it’s an essential read for professionals and institutions committed to the wellbeing of older people.</p>
+      <div class="ficha"><h3>Book details</h3><dl><dt>Title</dt><dd>Programa de entrenamiento para envejecer activamente (with CD-ROM)</dd><dt>Authors</dt><dd>C. Lojo, M. Campos, D. Facal, S. C. Mallo, Mª N. Riaño, P. Santamaría</dd><dt>Publisher</dt><dd>Editorial CCS</dd><dt>Focus</dt><dd>Practical gerontology, cognitive stimulation and psychosocial wellbeing</dd></dl></div>
+      <div class="authorbox"><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><div><h3>Why I recommend it</h3><p>Jean M. Vianney is a psychologist specialising in gerontology and neuropsychology. This work connects with his own approach —the MAR programme—, where cognitive stimulation and respect for autonomy always go hand in hand.</p></div></div>
+    </div>
+    <div class="cta-box">
+      <h3>Do you work with older people?</h3>
+      <p>Discover more resources and knowledge at CuidarConSentido, or write to me for professional guidance.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="https://amzn.to/4vDDBuZ" target="_blank" rel="noopener sponsored">See the book on Amazon</a>
+        <a class="btn btn-ghost" href="index.html">Back to home</a>
+      </div>
+    </div>
+    </div><!-- /lang-en -->
   </div>
 </article>
 
 <footer>
   <div class="wrap">
-    <div class="disc">Reseña con fines divulgativos. Algunos enlaces pueden ser de afiliado: si compras a través de ellos, CuidarConSentido puede recibir una pequeña comisión sin coste adicional para ti.</div>
+    <div class="disc"><span class="lang-es">Reseña con fines divulgativos. Algunos enlaces pueden ser de afiliado: si compras a través de ellos, CuidarConSentido puede recibir una pequeña comisión sin coste adicional para ti.</span><span class="lang-fr">Recension à but informatif. Certains liens peuvent être des liens d’affiliation : si vous achetez via ces liens, CuidarConSentido peut recevoir une petite commission sans coût supplémentaire pour vous.</span><span class="lang-en">Review for informational purposes. Some links may be affiliate links: if you buy through them, CuidarConSentido may earn a small commission at no extra cost to you.</span></div>
     © <span id="yr"></span> CuidarConSentido · Jean M. Vianney
   </div>
 </footer>
-<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+<script>
+  document.getElementById("yr").textContent=new Date().getFullYear();
+  function setLang(l){
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.lang = l;
+    ["es","fr","en"].forEach(function(x){ var b=document.getElementById(x); if(b){ b.setAttribute("aria-pressed", x===l?"true":"false"); } });
+    try{ window.scrollTo({top:0, behavior:"auto"}); }catch(e){}
+  }
+</script>
 </body>
 </html>

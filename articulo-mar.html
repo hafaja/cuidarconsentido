@@ -79,9 +79,12 @@ article h1{font-size:clamp(32px,5.4vw,50px); font-weight:500; margin-bottom:18px
 .btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.4)} .btn-ghost:hover{background:rgba(255,255,255,.1); transform:translateY(-2px)}
 footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; color:var(--ink-faint); font-size:13px}
 footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
-.lang-fr{display:none}
+.lang-fr,.lang-en{display:none}
 body[data-lang="fr"] .lang-es{display:none}
 body[data-lang="fr"] .lang-fr{display:block}
+body[data-lang="en"] .lang-es{display:none}
+body[data-lang="en"] .lang-fr{display:none}
+body[data-lang="en"] .lang-en{display:block}
 @media (max-width:600px){
   body{font-size:17px}
   .back span{display:none}
@@ -103,8 +106,9 @@ body[data-lang="fr"] .lang-fr{display:block}
       <div class="toggle" role="group" aria-label="Idioma / Langue">
         <button id="es" aria-pressed="true" onclick="setLang('es')">ES</button>
         <button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button>
+        <button id="en" aria-pressed="false" onclick="setLang('en')">EN</button>
       </div>
-      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span></a>
+      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
     </div>
   </div>
 </header>
@@ -202,13 +206,58 @@ body[data-lang="fr"] .lang-fr{display:block}
       </div>
     </div>
 
+    <!-- ===== ENGLISH ===== -->
+    <div class="lang-en">
+      <span class="eyebrow">Knowledge · Cognitive stimulation</span>
+      <h1>The MAR programme</h1>
+      <p class="standfirst">Stimulating the mind without forgetting the person: a support programme for older people, built on five keys. It’s the heart of my ongoing doctoral research.</p>
+      <div class="byline">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <span>By <b>Jean M. Vianney</b>, psychologist · Doctoral research in neuropsychological gerontology</span>
+      </div>
+
+      <div class="body">
+        <p class="lead-cap">When we talk about “cognitive stimulation”, we tend to picture worksheets, memory exercises or games. They’re useful, but they fall short if we forget the essential: behind every exercise there is a person, with their history, their emotions and their wish to feel worthwhile. The <strong>MAR</strong> programme grows from that idea.</p>
+        <p>MAR is a programme of <strong>support and cognitive stimulation for older people</strong> —especially in care homes— that I am testing in my doctoral research. Its aim is not only to “train the mind”, but to support the person so they keep their autonomy, their identity and their place. It rests on five keys.</p>
+
+        <div class="mods">
+          <div class="mod"><div class="num"></div><div><h3>Ease the emotional load</h3><p>Fear, sadness or anxiety block the mind as much as age does. Before stimulating, MAR seeks to ease that load: to create a calm, safe climate where the person feels accompanied, not tested.</p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Undo institutional overprotection</h3><p>In many homes, with the best intentions, everything is done “for” the person: they are dressed, decided for, corrected. Without meaning to, this dims them. MAR proposes the opposite: to do things “with” them, give them time, hand back small decisions. Autonomy can be stimulated too.</p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Life stories as a compass</h3><p>Knowing who they were —their trade, their homeland, their songs, their loved ones— lets us stimulate from what truly matters to them. Remembering the past is not nostalgia: it rebuilds identity and strengthens memory through emotion.</p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Consistency matters</h3><p>Improvement doesn’t come in a day: it depends on sustained participation. Regular attendance isn’t administrative red tape — it is part of the treatment itself. The more regular the presence, the more the gains take hold.</p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>cuidaApp as a daily ally</h3><p>The <a href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener">cuidaApp</a> application helps carers apply these ideas day by day. According to those who use it often, they feel calmer and refocus care on what the person really needs: to be listened to, accompanied, to have their wishes met and to be helped to remember their past. In a word: helped to feel like themselves and valued.</p></div></div>
+        </div>
+
+        <div class="statbox">
+          <div class="big">3<span style="font-size:24px">/4</span></div>
+          <div class="txt"><b>About 3 in 4 participants</b> who attended regularly showed notable progress, according to the research’s early observations. <span style="opacity:.8">(Preliminary results, ongoing.)</span></div>
+        </div>
+
+        <p class="pull">“It’s not about fixing a brain, but about supporting a person.”</p>
+
+        <h2>One thread: the person at the centre</h2>
+        <p>The five keys share one root: putting the person at the centre, in line with <strong>Tom Kitwood</strong>’s person-centred care. It’s the same principle that, in other fields —such as <a href="articulo-autismo.html">supporting autistic children</a>—, shows that a warm, predictable and respectful environment awakens abilities that seemed lost.</p>
+
+        <h2>What MAR seeks</h2>
+        <p>MAR promises no miracles: it offers a way of caring that is more human and, at the same time, more effective. Because when an older person feels heard, safe and recognised, their mind responds better too. Stimulating memory often begins by giving someone back the desire to keep being who they are.</p>
+
+        <div class="authorbox">
+          <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+          <div>
+            <h3>About the author</h3>
+            <p>Jean M. Vianney is a psychologist specialising in mental abilities, disability and gerontology. The MAR programme is the foundation of his doctoral research on cognitive stimulation in institutionalised older people, currently ongoing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- CTA bilingüe -->
     <div class="cta-box">
-      <h3><span class="lang-es">¿Cuidas a una persona mayor?</span><span class="lang-fr">Vous prenez soin d’une personne âgée ?</span></h3>
-      <p><span class="lang-es">Descubre cuidaApp y escríbeme si quieres orientación para acompañar mejor, con sentido.</span><span class="lang-fr">Découvrez cuidaApp et écrivez-moi si vous souhaitez un accompagnement, avec sens.</span></p>
+      <h3><span class="lang-es">¿Cuidas a una persona mayor?</span><span class="lang-fr">Vous prenez soin d’une personne âgée ?</span><span class="lang-en">Caring for an older person?</span></h3>
+      <p><span class="lang-es">Descubre cuidaApp y escríbeme si quieres orientación para acompañar mejor, con sentido.</span><span class="lang-fr">Découvrez cuidaApp et écrivez-moi si vous souhaitez un accompagnement, avec sens.</span><span class="lang-en">Discover cuidaApp and write to me if you’d like guidance to support someone better, with meaning.</span></p>
       <div class="cta-row">
-        <a class="btn btn-amber" href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener"><span class="lang-es">Conocer cuidaApp</span><span class="lang-fr">Découvrir cuidaApp</span></a>
-        <a class="btn btn-ghost" href="mailto:cuidarconsentido@gmail.com?subject=Programa%20MAR"><span class="lang-es">Escríbeme</span><span class="lang-fr">Écrivez-moi</span></a>
+        <a class="btn btn-amber" href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener"><span class="lang-es">Conocer cuidaApp</span><span class="lang-fr">Découvrir cuidaApp</span><span class="lang-en">Discover cuidaApp</span></a>
+        <a class="btn btn-ghost" href="mailto:cuidarconsentido@gmail.com?subject=Programa%20MAR"><span class="lang-es">Escríbeme</span><span class="lang-fr">Écrivez-moi</span><span class="lang-en">Email me</span></a>
       </div>
     </div>
 
@@ -217,7 +266,7 @@ body[data-lang="fr"] .lang-fr{display:block}
 
 <footer>
   <div class="wrap">
-    <div class="disc"><span class="lang-es">Este contenido es divulgativo y no sustituye el consejo médico o psicológico profesional. Los resultados mencionados son observaciones preliminares de una investigación en curso.</span><span class="lang-fr">Ce contenu est informatif et ne remplace pas un avis médical ou psychologique professionnel. Les résultats mentionnés sont des observations préliminaires d’une recherche en cours.</span></div>
+    <div class="disc"><span class="lang-es">Este contenido es divulgativo y no sustituye el consejo médico o psicológico profesional. Los resultados mencionados son observaciones preliminares de una investigación en curso.</span><span class="lang-fr">Ce contenu est informatif et ne remplace pas un avis médical ou psychologique professionnel. Les résultats mentionnés sont des observations préliminaires d’une recherche en cours.</span><span class="lang-en">This content is informational and does not replace professional medical or psychological advice. The results mentioned are preliminary observations from ongoing research.</span></div>
     © <span id="yr"></span> CuidarConSentido · Jean M. Vianney
   </div>
 </footer>
@@ -227,8 +276,7 @@ body[data-lang="fr"] .lang-fr{display:block}
   function setLang(l){
     document.body.setAttribute("data-lang", l);
     document.documentElement.lang = l;
-    document.getElementById("es").setAttribute("aria-pressed", l==="es"?"true":"false");
-    document.getElementById("fr").setAttribute("aria-pressed", l==="fr"?"true":"false");
+    ["es","fr","en"].forEach(function(x){ var b=document.getElementById(x); if(b){ b.setAttribute("aria-pressed", x===l?"true":"false"); } });
     try{ window.scrollTo({top:0, behavior:"auto"}); }catch(e){}
   }
 </script>

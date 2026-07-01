@@ -72,9 +72,12 @@ article h1{font-size:clamp(32px,5.4vw,50px); font-weight:500; margin-bottom:18px
 .btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.4)} .btn-ghost:hover{background:rgba(255,255,255,.1); transform:translateY(-2px)}
 footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; color:var(--ink-faint); font-size:13px}
 footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
-.lang-fr{display:none}
+.lang-fr,.lang-en{display:none}
 body[data-lang="fr"] .lang-es{display:none}
 body[data-lang="fr"] .lang-fr{display:block}
+body[data-lang="en"] .lang-es{display:none}
+body[data-lang="en"] .lang-fr{display:none}
+body[data-lang="en"] .lang-en{display:block}
 @media (max-width:600px){
   body{font-size:17px}
   .back span{display:none}
@@ -95,8 +98,9 @@ body[data-lang="fr"] .lang-fr{display:block}
       <div class="toggle" role="group" aria-label="Idioma / Langue">
         <button id="es" aria-pressed="true" onclick="setLang('es')">ES</button>
         <button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button>
+        <button id="en" aria-pressed="false" onclick="setLang('en')">EN</button>
       </div>
-      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span></a>
+      <a class="back" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
     </div>
   </div>
 </header>
@@ -180,13 +184,51 @@ body[data-lang="fr"] .lang-fr{display:block}
       </div>
     </div>
 
+    <!-- ===== ENGLISH ===== -->
+    <div class="lang-en">
+      <span class="eyebrow">Knowledge · Families and carers</span>
+      <h1>Caring for the carer</h1>
+      <p class="standfirst">Five keys to support the carer and prevent burnout. Because you can’t give what you don’t have.</p>
+      <div class="byline">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <span>By <b>Jean M. Vianney</b>, psychologist · Content from the cuidaApp programme</span>
+      </div>
+
+      <div class="body">
+        <p class="lead-cap">Caring for an older or dependent person is an act of love, but also a sustained burden that wears you down. Over time, many carers forget about themselves. Caring for the carer isn’t selfishness: it’s the foundation of care that can last. These five keys help protect your wellbeing.</p>
+
+        <div class="mods">
+          <div class="mod"><div class="num"></div><div><h3>Acknowledge your own needs</h3><p>You have emotional, physical and social needs too. Looking after yourself isn’t selfish: it’s the condition for continuing to care well. Ask yourself every day: <strong>how am I doing today?</strong></p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Set healthy limits</h3><p>Learning to say “I can’t do everything” isn’t giving up, it’s being honest. Delegating to other family members or to support services lets you recover energy and avoid severe exhaustion — so-called <strong>carer burnout</strong>.</p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Look after your body</h3><p>Sleep, nutrition and physical movement are basic pillars. Small active breaks, a daily walk or respecting your rest hours make a real difference to your health.</p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Seek emotional and social support</h3><p>Talking to someone you trust, joining a carers’ group or seeing a psychologist eases the emotional load. Isolation is one of the factors that most harms a carer’s health. <strong>You are not alone.</strong></p></div></div>
+          <div class="mod"><div class="num"></div><div><h3>Allow room for rest and disconnection</h3><p>So-called <strong>carer respite</strong> (family respite or relief services) are valid and necessary tools. Doing something you enjoy, even for a short while, recharges your capacity for affection and attention.</p></div></div>
+        </div>
+
+        <p class="pull">“You can’t give what you don’t have. Caring for yourself is the basis of sustainable care.”</p>
+
+        <div class="note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-9-9a4.5 4.5 0 018-3 4.5 4.5 0 018 3c-2 4.5-7 9-7 9z"/></svg>
+          <span>If you notice that exhaustion becomes constant —persistent sadness, insomnia, irritability or the feeling of not coping any more—, talk to your doctor or a psychologist. Asking for help is a sign of strength, not weakness.</span>
+        </div>
+
+        <div class="authorbox">
+          <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+          <div>
+            <h3>About the author</h3>
+            <p>Jean M. Vianney is a psychologist specialising in mental abilities, disability and gerontology. This content is part of cuidaApp, his support programme for carers of people with cognitive decline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- CTA bilingüe -->
     <div class="cta-box">
-      <h3><span class="lang-es">No cuidas en soledad</span><span class="lang-fr">Vous n’accompagnez pas seul·e</span></h3>
-      <p><span class="lang-es">cuidaApp te acompaña en el día a día. Y si necesitas orientación, puedes escribirme.</span><span class="lang-fr">cuidaApp vous accompagne au quotidien. Et si vous avez besoin de conseils, vous pouvez m’écrire.</span></p>
+      <h3><span class="lang-es">No cuidas en soledad</span><span class="lang-fr">Vous n’accompagnez pas seul·e</span><span class="lang-en">You don’t care alone</span></h3>
+      <p><span class="lang-es">cuidaApp te acompaña en el día a día. Y si necesitas orientación, puedes escribirme.</span><span class="lang-fr">cuidaApp vous accompagne au quotidien. Et si vous avez besoin de conseils, vous pouvez m’écrire.</span><span class="lang-en">cuidaApp supports you day by day. And if you need guidance, you can write to me.</span></p>
       <div class="cta-row">
-        <a class="btn btn-amber" href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener"><span class="lang-es">Conocer cuidaApp</span><span class="lang-fr">Découvrir cuidaApp</span></a>
-        <a class="btn btn-ghost" href="mailto:cuidarconsentido@gmail.com?subject=Apoyo%20al%20cuidador"><span class="lang-es">Escríbeme</span><span class="lang-fr">Écrivez-moi</span></a>
+        <a class="btn btn-amber" href="https://cuidarconsentido.netlify.app" target="_blank" rel="noopener"><span class="lang-es">Conocer cuidaApp</span><span class="lang-fr">Découvrir cuidaApp</span><span class="lang-en">Discover cuidaApp</span></a>
+        <a class="btn btn-ghost" href="mailto:cuidarconsentido@gmail.com?subject=Apoyo%20al%20cuidador"><span class="lang-es">Escríbeme</span><span class="lang-fr">Écrivez-moi</span><span class="lang-en">Email me</span></a>
       </div>
     </div>
 
@@ -195,7 +237,7 @@ body[data-lang="fr"] .lang-fr{display:block}
 
 <footer>
   <div class="wrap">
-    <div class="disc"><span class="lang-es">Este contenido es divulgativo y no sustituye el consejo médico o psicológico profesional.</span><span class="lang-fr">Ce contenu est informatif et ne remplace pas un avis médical ou psychologique professionnel.</span></div>
+    <div class="disc"><span class="lang-es">Este contenido es divulgativo y no sustituye el consejo médico o psicológico profesional.</span><span class="lang-fr">Ce contenu est informatif et ne remplace pas un avis médical ou psychologique professionnel.</span><span class="lang-en">This content is informational and does not replace professional medical or psychological advice.</span></div>
     © <span id="yr"></span> CuidarConSentido · Jean M. Vianney
   </div>
 </footer>
@@ -205,8 +247,7 @@ body[data-lang="fr"] .lang-fr{display:block}
   function setLang(l){
     document.body.setAttribute("data-lang", l);
     document.documentElement.lang = l;
-    document.getElementById("es").setAttribute("aria-pressed", l==="es"?"true":"false");
-    document.getElementById("fr").setAttribute("aria-pressed", l==="fr"?"true":"false");
+    ["es","fr","en"].forEach(function(x){ var b=document.getElementById(x); if(b){ b.setAttribute("aria-pressed", x===l?"true":"false"); } });
     try{ window.scrollTo({top:0, behavior:"auto"}); }catch(e){}
   }
 </script>
