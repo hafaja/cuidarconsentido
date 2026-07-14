@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>De la filosofía a la ciencia: así nació la gerontología · CuidarConSentido</title>
+<meta name="description" content="Un recorrido por los antecedentes humanistas y científicos de la gerontología: del Antiguo Testamento y Platón a Quetelet, Galton, Hall y Pavlov. Por Jean M. Vianney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F3EC; --bg2:#FFFFFF; --paper:#FBF9F4;
+  --ink:#21302C; --ink-soft:#54635D; --ink-faint:#8A968F;
+  --line:#E7E0D2; --line2:#DED6C4;
+  --green:#20564A; --green-d:#163E34; --green-soft:#DCE8E1; --green-tint:#EAF1ED;
+  --amber:#DD9C44; --amber-d:#BC7F2C; --amber-soft:#F7E8CD;
+  --shadow:0 1px 2px rgba(30,50,44,.04), 0 12px 30px -12px rgba(30,50,44,.14);
+  --r:18px; --maxw:760px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'Mulish',system-ui,sans-serif; font-size:18px; line-height:1.7; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif; font-weight:500; line-height:1.15; letter-spacing:-.01em; margin:0}
+p{margin:0 0 1.1em}
+a{color:inherit}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+header.bar{position:sticky; top:0; z-index:30; background:rgba(246,243,236,.9); backdrop-filter:blur(12px); border-bottom:1px solid var(--line)}
+.bar-in{max-width:1040px; margin:0 auto; padding:0 22px; height:64px; display:flex; align-items:center; gap:16px}
+.brand{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:18px; color:var(--ink); text-decoration:none}
+.brand b{color:var(--green)} .brand span{color:var(--amber-d)}
+.back{margin-left:auto; font-weight:700; font-size:14px; color:var(--green); display:inline-flex; align-items:center; gap:6px; padding:8px 6px; text-decoration:none}
+.back svg{width:15px;height:15px}
+article{padding:52px 0 20px}
+.eyebrow{display:inline-flex; align-items:center; gap:9px; font-size:12px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--green); margin-bottom:18px}
+.eyebrow::before{content:""; width:22px; height:2px; background:var(--amber); border-radius:2px}
+article h1{font-size:clamp(30px,5vw,46px); font-weight:500; margin-bottom:18px}
+.standfirst{font-size:20.5px; color:var(--ink-soft); font-family:'Fraunces',serif; font-style:italic; line-height:1.45; margin-bottom:26px}
+.byline{display:flex; align-items:center; gap:12px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:14.5px; color:var(--ink-soft); margin-bottom:8px}
+.byline .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(150deg,var(--green-soft),var(--amber-soft)); display:flex;align-items:center;justify-content:center;color:var(--green);flex:none}
+.byline .av svg{width:22px;height:22px}
+.byline b{color:var(--ink)}
+.body{padding-top:30px}
+.body h2{font-size:clamp(23px,3.2vw,29px); margin:38px 0 14px}
+.body p{margin-bottom:1.15em}
+.body strong{color:var(--ink)}
+.lead-cap::first-letter{font-family:'Fraunces',serif; font-size:3.4em; line-height:.82; float:left; margin:6px 10px 0 0; color:var(--green); font-weight:600}
+ul.clean{list-style:none; padding:0; margin:0 0 1.2em}
+ul.clean li{position:relative; padding:8px 0 8px 30px; border-bottom:1px solid var(--line)}
+ul.clean li::before{content:""; position:absolute; left:4px; top:17px; width:9px; height:9px; border-radius:50%; background:var(--amber)}
+ul.clean li b{color:var(--ink)}
+.ficha{background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:22px 24px; margin:30px 0}
+.ficha h3{font-size:14px; text-transform:uppercase; letter-spacing:.08em; color:var(--green); margin-bottom:12px}
+.ficha dl{display:grid; grid-template-columns:auto 1fr; gap:8px 18px; margin:0; font-size:15px}
+.ficha dt{color:var(--ink-faint); font-weight:700} .ficha dd{margin:0; color:var(--ink)}
+.pull{font-family:'Fraunces',serif; font-style:italic; font-size:clamp(22px,3.4vw,28px); line-height:1.35; color:var(--green); border-left:4px solid var(--amber); padding:6px 0 6px 24px; margin:34px 0}
+.authorbox{display:flex; gap:18px; align-items:flex-start; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); padding:24px; margin:42px 0 0}
+.authorbox .av{width:56px;height:56px;border-radius:50%;background:linear-gradient(150deg,var(--green-soft),var(--amber-soft));display:flex;align-items:center;justify-content:center;color:var(--green);flex:none}
+.authorbox .av svg{width:28px;height:28px}
+.authorbox h3{font-size:18px; margin-bottom:6px}
+.authorbox p{font-size:14.5px; color:var(--ink-soft); margin:0}
+.cta-box{text-align:center; background:var(--green); color:#EAF1ED; border-radius:24px; padding:40px 26px; margin:46px 0 10px}
+.cta-box h3{color:#fff; font-size:clamp(22px,3.2vw,28px); margin-bottom:10px}
+.cta-box p{color:#BAD0C8; max-width:32em; margin:0 auto 22px; font-size:16px}
+.cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; gap:9px; font-family:inherit; font-weight:800; font-size:15px; padding:13px 22px; border-radius:999px; cursor:pointer; border:1.5px solid transparent; text-decoration:none; transition:transform .15s, background .2s}
+.btn-amber{background:var(--amber); color:#3a2a0e} .btn-amber:hover{background:#fff; transform:translateY(-2px)}
+.btn-ghost{background:transparent; color:#fff; border-color:rgba(255,255,255,.4)} .btn-ghost:hover{background:rgba(255,255,255,.1); transform:translateY(-2px)}
+footer{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 40px; color:var(--ink-faint); font-size:13px}
+footer .disc{background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:13px 16px; margin-bottom:16px; line-height:1.6}
+@media (max-width:600px){ body{font-size:17px} .authorbox{flex-direction:column; gap:12px} .ficha dl{grid-template-columns:1fr} .ficha dt{margin-top:6px} }
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover{transform:none}}
+.lang-fr,.lang-en{display:none}
+body[data-lang="fr"] .lang-es{display:none}
+body[data-lang="fr"] .lang-fr{display:block}
+body[data-lang="en"] .lang-es{display:none}
+body[data-lang="en"] .lang-fr{display:none}
+body[data-lang="en"] .lang-en{display:block}
+.toggle{display:inline-flex;border:1.5px solid var(--line2);border-radius:999px;overflow:hidden;background:var(--paper)}
+.toggle button{font-family:inherit;font-weight:800;font-size:12px;padding:6px 11px;background:none;border:none;cursor:pointer;color:var(--ink-soft)}
+.toggle button[aria-pressed="true"]{background:var(--green);color:#fff}
+</style>
+</head>
+<body data-lang="es">
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="index.html" aria-label="CuidarConSentido inicio">
+      <svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#EAF1ED" stroke="#DCE8E1"/><path d="M5 22 C11 22 12 14 17 14 C22 14 23 22 29 22" stroke="#20564A" stroke-width="2.2" fill="none" stroke-linecap="round"/><circle cx="17" cy="11" r="3.4" fill="#DD9C44"/></svg>
+      <span><b>Cuidar</b><span>Con</span><b>Sentido</b></span>
+    </a>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <div class="toggle" role="group" aria-label="Idioma"><button id="es" aria-pressed="true" onclick="setLang('es')">ES</button><button id="fr" aria-pressed="false" onclick="setLang('fr')">FR</button><button id="en" aria-pressed="false" onclick="setLang('en')">EN</button></div>
+      <a class="back" href="index.html" style="margin-left:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> <span class="lang-es">Inicio</span><span class="lang-fr">Accueil</span><span class="lang-en">Home</span></a>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+
+    <div class="lang-es">
+    <span class="eyebrow">Historia y fundamentos · Gerontología</span>
+    <h1>De la filosofía a la ciencia: así nació la gerontología</h1>
+    <p class="standfirst">Un recorrido por cómo la humanidad pasó de reflexionar filosóficamente sobre la vejez a estudiarla con método y datos.</p>
+    <div class="byline">
+      <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+      <span>Por <b>Jean M. Vianney</b>, psicólogo · Historia y fundamentos</span>
+    </div>
+
+    <div class="body">
+      <p class="lead-cap">Antes de que existiera la palabra «gerontología», la vejez ya era objeto de reflexión. Durante siglos, textos sagrados, filósofos, escritores y pensadores intentaron comprender qué significa envejecer, mucho antes de que la ciencia se ocupara de estudiarlo con <strong>método y datos</strong>. Conocer este recorrido nos ayuda a entender por qué hoy miramos el envejecimiento como lo hacemos: como una etapa con sus propios retos, pero también con recursos y posibilidades.</p>
+
+      <h2>Los primeros indicios: de los textos antiguos a Platón y Aristóteles</h2>
+      <p>Mucho antes de la filosofía griega, la vejez ya aparecía retratada en textos muy antiguos. En el <strong>Antiguo Testamento</strong>, por ejemplo, se destaca el valor de las personas mayores, su papel como guías y ejemplo para las generaciones más jóvenes, y el respeto que se les debe. Esta misma línea de pensamiento aparece también en textos egipcios y griegos, donde abundan las referencias a la sabiduría asociada a la edad avanzada.</p>
+      <p>Fue, sin embargo, en la filosofía griega donde estos antecedentes se hicieron más explícitos. <strong>Platón</strong> planteó una visión bastante personal e íntima de la vejez: sostenía que cada persona envejece según cómo ha vivido, y subrayaba la importancia de prepararse para la vejez desde la juventud. En este sentido, Platón puede considerarse un antecedente tanto de la mirada positiva sobre el envejecimiento como de la idea —muy actual— de la prevención.</p>
+      <p><strong>Aristóteles</strong>, por su parte, ofreció una visión distinta: describió la vida humana en etapas —infancia, juventud, madurez y, finalmente, la senectud, asociada al deterioro—. Llegó incluso a describir la vejez como una especie de enfermedad natural. Estas dos posturas ya muestran una tensión que, como veremos, se repetiría durante siglos.</p>
+
+      <h2>Cuando la vejez era cosa de filósofos</h2>
+      <p>Esa misma tensión siguió presente en la filosofía romana. Por un lado, autores como <strong>Cicerón</strong> defendían una visión positiva: sostenían que, aunque el cuerpo pierda fuerza con los años, la mente gana en criterio, experiencia y capacidad de juicio. La vejez, según esta corriente, no empobrece a la persona sino que la enriquece con una sabiduría que solo da el tiempo vivido.</p>
+      <p>En el extremo contrario, pensadores como <strong>Séneca</strong> —siguiendo en parte a Aristóteles— describían la vejez casi como una enfermedad, marcada por el deterioro físico y mental. Esta tensión entre una visión optimista y otra más pesimista de la vejez no fue exclusiva de la filosofía: se repitió a lo largo de la historia en la literatura, la pintura y otras expresiones culturales, y de algún modo sigue presente hoy en cómo hablamos del envejecimiento.</p>
+
+      <h2>El salto hacia la ciencia</h2>
+      <p>El paso de la reflexión filosófica al estudio científico de la vejez fue lento. Se suele situar su origen en el siglo XVII, con <strong>Francis Bacon</strong>, quien fue de los primeros en plantear que la duración de la vida humana podría prolongarse gracias a mejoras en la higiene y en las condiciones sociales y médicas —una idea que, efectivamente, tardaría siglos en confirmarse, pero que resultó profética.</p>
+      <p>Sin embargo, no fue hasta el siglo XIX cuando el estudio de la vejez empezó a apoyarse en observación sistemática y datos, dando lugar a lo que hoy reconocemos como los verdaderos cimientos científicos de la gerontología. Algunas figuras clave de ese periodo:</p>
+
+      <ul class="clean">
+        <li><b>Adolphe Quetelet</b> (belga, 1796-1874): pionero en aplicar principios estadísticos al estudio del desarrollo humano a lo largo de la vida, explorando cómo se relacionan edad, profesión, hábitat y otros factores.</li>
+        <li><b>Francis Galton</b> (británico, 1832-1911): estudió diferencias individuales en capacidades físicas y sensoriales en miles de personas de distintas edades, sentando bases para entender cómo cambian —y qué se mantiene estable— las capacidades humanas con el paso del tiempo.</li>
+        <li><b>Stanley Hall</b> (psicólogo estadounidense, 1844-1924): contribuyó a cuestionar el llamado «modelo deficitario» del envejecimiento, al demostrar que las diferencias individuales en la vejez son incluso mayores que en otras etapas de la vida.</li>
+        <li><b>Ivan Pavlov</b> (ruso, 1894-1936): sus estudios sobre el sistema nervioso, comparando animales jóvenes y viejos, aportaron una perspectiva biológica al fenómeno del envejecimiento.</li>
+      </ul>
+
+      <p class="pull">No hay un único camino: el envejecimiento es profundamente individual.</p>
+
+      <p>Este breve recorrido —desde los textos antiguos hasta los primeros estudios científicos— no es solo un dato curioso. Nos recuerda algo esencial para quienes cuidamos o acompañamos a personas mayores: la idea de que «envejecer es solo perder» es antigua, pero también lo es la idea contraria. La ciencia moderna —y la experiencia de quienes trabajamos día a día en gerontología— confirma que las diferencias entre una persona mayor y otra pueden ser enormes.</p>
+
+      <div class="ficha">
+        <h3>Fuente de referencia</h3>
+        <dl>
+          <dt>Obra</dt><dd>Gerontología social</dd>
+          <dt>Directora</dt><dd>Rocío Fernández-Ballesteros</dd>
+          <dt>Editorial</dt><dd>Ediciones Pirámide, colección Psicología</dd>
+          <dt>Capítulo</dt><dd>Precursores y antecedentes científicos de la gerontología</dd>
+        </dl>
+      </div>
+
+      <div class="authorbox">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <div>
+          <h3>Por qué escribo sobre esto</h3>
+          <p>Jean M. Vianney es psicólogo especializado en gerontología y neuropsicología, y doctorando en gerontología. Conocer la historia de esta disciplina ayuda a entender mejor los enfoques actuales de prevención y estimulación cognitiva con los que trabaja cada día.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>¿Te interesa la gerontología?</h3>
+      <p>Descubre más recursos y conocimiento riguroso sobre el envejecimiento cognitivo en CuidarConSentido.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="index.html#conocimiento">Explorar el conocimiento</a>
+        <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
+      </div>
+    </div>
+    </div><!-- /lang-es -->
+
+    <div class="lang-fr">
+    <span class="eyebrow">Histoire et fondements · Gérontologie</span>
+    <h1>De la philosophie à la science : comment est née la gérontologie</h1>
+    <p class="standfirst">Un parcours sur la façon dont l'humanité est passée de la réflexion philosophique sur la vieillesse à son étude par la méthode et les données.</p>
+    <div class="byline">
+      <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+      <span>Par <b>Jean M. Vianney</b>, psychologue · Histoire et fondements</span>
+    </div>
+
+    <div class="body">
+      <p class="lead-cap">Avant même que le mot « gérontologie » n'existe, la vieillesse faisait déjà l'objet de réflexions. Pendant des siècles, textes sacrés, philosophes, écrivains et penseurs ont cherché à comprendre ce que signifie vieillir, bien avant que la science ne s'en empare avec <strong>méthode et données</strong>. Connaître ce parcours nous aide à comprendre pourquoi nous regardons aujourd'hui le vieillissement comme nous le faisons : comme une étape avec ses propres défis, mais aussi ses ressources et ses possibilités.</p>
+
+      <h2>Les premiers indices : des textes anciens à Platon et Aristote</h2>
+      <p>Bien avant la philosophie grecque, la vieillesse apparaissait déjà dans des textes très anciens. Dans l'<strong>Ancien Testament</strong>, par exemple, la valeur des personnes âgées est mise en avant, ainsi que leur rôle de guides et d'exemples pour les générations plus jeunes, et le respect qui leur est dû. Cette même ligne de pensée se retrouve également dans des textes égyptiens et grecs, où abondent les références à la sagesse associée à l'âge avancé.</p>
+      <p>C'est toutefois dans la philosophie grecque que ces antécédents se sont exprimés le plus clairement. <strong>Platon</strong> proposait une vision assez personnelle et intime de la vieillesse : il soutenait que chacun vieillit selon la façon dont il a vécu, et soulignait l'importance de se préparer à la vieillesse dès la jeunesse. En ce sens, Platon peut être considéré comme un précurseur à la fois d'une vision positive du vieillissement et de l'idée — très actuelle — de prévention.</p>
+      <p><strong>Aristote</strong>, de son côté, proposait une vision différente : il décrivait la vie humaine en étapes — l'enfance, la jeunesse, la maturité et, enfin, la vieillesse, associée au déclin. Il alla même jusqu'à décrire la vieillesse comme une sorte de maladie naturelle. Ces deux positions révèlent déjà une tension qui, comme nous le verrons, allait se répéter pendant des siècles.</p>
+
+      <h2>Quand la vieillesse était l'affaire des philosophes</h2>
+      <p>Cette même tension est restée présente dans la philosophie romaine. D'un côté, des auteurs comme <strong>Cicéron</strong> défendaient une vision positive : ils soutenaient que, même si le corps perd en force avec les années, l'esprit gagne en jugement, en expérience et en discernement. La vieillesse, selon ce courant, n'appauvrit pas la personne mais l'enrichit d'une sagesse que seul le temps vécu peut offrir.</p>
+      <p>À l'opposé, des penseurs comme <strong>Sénèque</strong> — en partie dans la lignée d'Aristote — décrivaient la vieillesse presque comme une maladie, marquée par le déclin physique et mental. Cette tension entre une vision optimiste et une vision plus pessimiste de la vieillesse n'a pas été propre à la philosophie : elle s'est répétée tout au long de l'histoire dans la littérature, la peinture et d'autres expressions culturelles, et elle imprègne encore, d'une certaine façon, notre manière de parler du vieillissement aujourd'hui.</p>
+
+      <h2>Le passage vers la science</h2>
+      <p>Le passage de la réflexion philosophique à l'étude scientifique de la vieillesse fut lent. On situe généralement son origine au XVIIe siècle, avec <strong>Francis Bacon</strong>, l'un des premiers à avancer que la durée de la vie humaine pourrait s'allonger grâce à l'amélioration de l'hygiène et des conditions sociales et médicales — une idée qui allait effectivement se vérifier, mais des siècles plus tard.</p>
+      <p>Il faudra cependant attendre le XIXe siècle pour que l'étude de la vieillesse s'appuie sur une observation systématique et des données, posant ainsi les véritables fondations scientifiques de la gérontologie. Quelques figures clés de cette période :</p>
+
+      <ul class="clean">
+        <li><b>Adolphe Quetelet</b> (belge, 1796-1874) : pionnier de l'application des principes statistiques à l'étude du développement humain tout au long de la vie, explorant les liens entre âge, profession, habitat et d'autres facteurs.</li>
+        <li><b>Francis Galton</b> (britannique, 1832-1911) : a étudié les différences individuelles dans les capacités physiques et sensorielles chez des milliers de personnes d'âges différents, posant les bases pour comprendre comment évoluent — et ce qui reste stable dans — les capacités humaines au fil du temps.</li>
+        <li><b>Stanley Hall</b> (psychologue américain, 1844-1924) : a contribué à remettre en question le « modèle déficitaire » du vieillissement, en démontrant que les différences individuelles à un âge avancé sont encore plus marquées qu'à d'autres étapes de la vie.</li>
+        <li><b>Ivan Pavlov</b> (russe, 1894-1936) : ses études sur le système nerveux, comparant animaux jeunes et âgés, ont apporté une perspective biologique au phénomène du vieillissement.</li>
+      </ul>
+
+      <p class="pull">Il n'existe pas un seul chemin : le vieillissement est profondément individuel.</p>
+
+      <p>Ce bref parcours — des textes anciens aux premières études scientifiques — n'est pas qu'une curiosité historique. Il nous rappelle quelque chose d'essentiel pour celles et ceux qui accompagnent des personnes âgées : l'idée que « vieillir, c'est seulement perdre » est ancienne, mais l'idée contraire l'est tout autant. La science moderne — et l'expérience de celles et ceux qui travaillent chaque jour en gérontologie — confirme que les différences entre une personne âgée et une autre peuvent être considérables.</p>
+
+      <div class="ficha">
+        <h3>Source de référence</h3>
+        <dl>
+          <dt>Ouvrage</dt><dd>Gerontología social</dd>
+          <dt>Directrice</dt><dd>Rocío Fernández-Ballesteros</dd>
+          <dt>Éditeur</dt><dd>Ediciones Pirámide, collection Psicología</dd>
+          <dt>Chapitre</dt><dd>Précurseurs et antécédents scientifiques de la gérontologie</dd>
+        </dl>
+      </div>
+
+      <div class="authorbox">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <div>
+          <h3>Pourquoi j'écris sur ce sujet</h3>
+          <p>Jean M. Vianney est psychologue spécialisé en gérontologie et neuropsychologie, et doctorant en gérontologie. Connaître l'histoire de cette discipline aide à mieux comprendre les approches actuelles de prévention et de stimulation cognitive avec lesquelles il travaille chaque jour.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>La gérontologie vous intéresse ?</h3>
+      <p>Découvrez plus de ressources et de savoir rigoureux sur le vieillissement cognitif sur CuidarConSentido.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="index.html#conocimiento">Explorer le savoir</a>
+        <a class="btn btn-ghost" href="index.html">Retour à l'accueil</a>
+      </div>
+    </div>
+    </div><!-- /lang-fr -->
+
+    <div class="lang-en">
+    <span class="eyebrow">History & foundations · Gerontology</span>
+    <h1>From Philosophy to Science: How Gerontology Was Born</h1>
+    <p class="standfirst">A journey through how humanity moved from philosophical reflection on old age to studying it with method and data.</p>
+    <div class="byline">
+      <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+      <span>By <b>Jean M. Vianney</b>, psychologist · History & foundations</span>
+    </div>
+
+    <div class="body">
+      <p class="lead-cap">Long before the word "gerontology" existed, old age was already a subject of reflection. For centuries, sacred texts, philosophers, writers, and thinkers tried to understand what it means to grow old, well before science approached the question with <strong>method and data</strong>. Knowing this history helps us understand why we view aging the way we do today: as a stage with its own challenges, but also its own resources and possibilities.</p>
+
+      <h2>The Earliest Traces: From Ancient Texts to Plato and Aristotle</h2>
+      <p>Long before Greek philosophy, old age was already portrayed in very ancient texts. In the <strong>Old Testament</strong>, for instance, the value of older people is emphasized, along with their role as guides and examples for younger generations, and the respect owed to them. This same line of thought also appears in Egyptian and Greek texts, which are full of references to the wisdom associated with advanced age.</p>
+      <p>It was in Greek philosophy, however, that these ideas became more explicit. <strong>Plato</strong> proposed a fairly personal and intimate view of old age: he argued that each person ages according to how they have lived, and stressed the importance of preparing for old age from youth onward. In this sense, Plato can be seen as a forerunner of both a positive view of aging and the — still very relevant — idea of prevention.</p>
+      <p><strong>Aristotle</strong>, for his part, offered a different view: he described human life in stages — childhood, youth, maturity, and finally old age, associated with decline. He even went as far as describing old age as a kind of natural illness. These two positions already reveal a tension that, as we'll see, would repeat itself for centuries.</p>
+
+      <h2>When Old Age Was a Matter for Philosophers</h2>
+      <p>That same tension carried into Roman philosophy. On one side, authors like <strong>Cicero</strong> championed a positive vision: they argued that although the body loses strength with the years, the mind gains in judgment, experience, and discernment. In this view, old age doesn't diminish a person — it enriches them with a wisdom that only time can bring.</p>
+      <p>On the opposite side, thinkers like <strong>Seneca</strong> — following, in part, Aristotle — described old age almost as an illness, marked by physical and mental decline. This tension between an optimistic and a more pessimistic view of aging wasn't unique to philosophy: it recurred throughout history in literature, painting, and other cultural expressions, and in some ways it still shapes how we talk about aging today.</p>
+
+      <h2>The Leap Toward Science</h2>
+      <p>The shift from philosophical reflection to the scientific study of aging was slow. Its origins are usually traced to the 17th century, with <strong>Francis Bacon</strong>, one of the first to propose that human life could be extended through improvements in hygiene and social and medical conditions — an idea that would indeed prove true, though only centuries later.</p>
+      <p>It wasn't until the 19th century, however, that the study of aging began to rest on systematic observation and data, laying the true scientific foundations of gerontology. Some key figures from that period:</p>
+
+      <ul class="clean">
+        <li><b>Adolphe Quetelet</b> (Belgian, 1796–1874): a pioneer in applying statistical principles to the study of human development across the lifespan, exploring how age, profession, environment, and other factors relate to one another.</li>
+        <li><b>Francis Galton</b> (British, 1832–1911): studied individual differences in physical and sensory capacities among thousands of people of different ages, laying groundwork for understanding how human abilities change — and what stays stable — over time.</li>
+        <li><b>Stanley Hall</b> (American psychologist, 1844–1924): helped challenge the so-called "deficit model" of aging by showing that individual differences in old age are actually greater than at other life stages.</li>
+        <li><b>Ivan Pavlov</b> (Russian, 1894–1936): his studies on the nervous system, comparing young and old animals, brought a biological perspective to the phenomenon of aging.</li>
+      </ul>
+
+      <p class="pull">There is no single path: aging is deeply individual.</p>
+
+      <p>This brief journey — from ancient texts to the first scientific studies — isn't just a curiosity. It reminds us of something essential for anyone who cares for or supports older adults: the idea that "aging is just loss" is an old one — but so is the opposite idea. Modern science — and the daily experience of those working in gerontology — confirms that the differences between one older person and another can be enormous.</p>
+
+      <div class="ficha">
+        <h3>Reference source</h3>
+        <dl>
+          <dt>Work</dt><dd>Gerontología social</dd>
+          <dt>Editor</dt><dd>Rocío Fernández-Ballesteros</dd>
+          <dt>Publisher</dt><dd>Ediciones Pirámide, Psicología series</dd>
+          <dt>Chapter</dt><dd>Precursors and scientific antecedents of gerontology</dd>
+        </dl>
+      </div>
+
+      <div class="authorbox">
+        <span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+        <div>
+          <h3>Why I write about this</h3>
+          <p>Jean M. Vianney is a psychologist specialising in gerontology and neuropsychology, and a doctoral candidate in gerontology. Knowing the history of this discipline helps make better sense of today's approaches to prevention and cognitive stimulation, which shape his daily work.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Interested in gerontology?</h3>
+      <p>Discover more resources and rigorous knowledge on cognitive ageing at CuidarConSentido.</p>
+      <div class="cta-row">
+        <a class="btn btn-amber" href="index.html#conocimiento">Explore the knowledge</a>
+        <a class="btn btn-ghost" href="index.html">Back to home</a>
+      </div>
+    </div>
+    </div><!-- /lang-en -->
+
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="disc"><span class="lang-es">Artículo con fines divulgativos, elaborado a partir de fuentes académicas de referencia sobre historia de la gerontología.</span><span class="lang-fr">Article à but informatif, élaboré à partir de sources académiques de référence sur l'histoire de la gérontologie.</span><span class="lang-en">Article for informational purposes, based on reference academic sources on the history of gerontology.</span></div>
+    © <span id="yr"></span> CuidarConSentido · Jean M. Vianney
+  </div>
+</footer>
+<script>
+  document.getElementById("yr").textContent=new Date().getFullYear();
+  function setLang(l){
+    document.body.setAttribute("data-lang", l);
+    document.documentElement.lang = l;
+    ["es","fr","en"].forEach(function(x){ var b=document.getElementById(x); if(b){ b.setAttribute("aria-pressed", x===l?"true":"false"); } });
+    try{ window.scrollTo({top:0, behavior:"auto"}); }catch(e){}
+  }
+</script>
+</body>
+</html>
